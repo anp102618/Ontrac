@@ -1,15 +1,14 @@
-.home-page {
+.products-page {
   min-height: 100vh;
   background-size: cover;
-  background-position: right center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
-.home-overlay {
+.products-overlay {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: transparent;
 }
 
 .home-topbar {
@@ -59,7 +58,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.8rem 2rem;
+  padding: 1.6rem 2rem;
   background: #eef4ff;
   min-height: 150px;
   border-radius: 32px;
@@ -124,19 +123,12 @@
   line-height: 1.4;
 }
 
-.home-header {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  background: #000000;
-}
-
 .home-nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.75rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   background: #000000;
 }
 
@@ -167,143 +159,184 @@
   transform: translateY(-1px);
 }
 
-.home-hero {
+.products-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 4rem 2rem 2rem;
+}
+
+.products-left {
   display: flex;
-  align-items: center;
-  min-height: calc(100vh - 230px);
-  padding: 4rem 2.5rem 5rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
-.home-hero-copy {
-  max-width: 720px;
-  background: transparent;
-  text-align: left;
+.products-left img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100% - 1rem);
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+  object-fit: cover;
 }
 
-.home-hero-copy h1 {
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  line-height: 0.88;
+.products-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.products-hero-copy {
+  max-width: 620px;
+}
+
+.products-hero-copy h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
   margin: 0;
-  letter-spacing: -0.05em;
+  line-height: 0.95;
   text-transform: uppercase;
-  color: #0b1120;
   font-weight: 900;
+  color: #0b1120;
 }
 
-.home-hero-copy span {
+.products-hero-copy span {
   color: #0d4bcc;
 }
 
-.home-divider {
-  width: 140px;
-  height: 4px;
-  margin: 1.75rem 0 1rem;
+.products-underline {
+  width: 80px;
+  height: 5px;
+  margin: 1rem 0 1.5rem 0;
   background: #0d4bcc;
   border-radius: 999px;
 }
 
-.home-tagline {
+.products-hero-copy p {
   margin: 0;
-  font-size: 1.12rem;
-  color: #0b1120;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
-.home-description {
-  margin: 1.5rem 0 2.5rem;
-  max-width: 46rem;
-  line-height: 1.75;
-  color: #1f2937;
-  font-size: 1.03rem;
+  max-width: 560px;
+  color: #111827;
+  font-size: 1.05rem;
+  line-height: 1.8;
   font-weight: 600;
-  letter-spacing: 0.01em;
 }
 
-.home-cta {
-  display: inline-flex;
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(13, 75, 204, 0.12);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 300px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 100px rgba(15, 23, 42, 0.16);
+}
+
+.product-card-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  background: #0d4bcc;
+  gap: 1rem;
+}
+
+.product-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d4bcc 0%, #1d4ed8 100%);
   color: #ffffff;
-  padding: 1rem 1.75rem;
-  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0b1120;
+  font-weight: 900;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.95rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: transform 180ms ease, background 180ms ease;
+  position: relative;
+  padding-bottom: 0.55rem;
 }
 
-.home-cta:hover {
-  transform: translateY(-2px);
-  background: #2563eb;
+.product-card h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #0d4bcc;
+  border-radius: 999px;
 }
 
-.home-cta-icon {
-  width: 1rem;
-  height: 1rem;
+.product-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 
-@media (max-width: 1040px) {
-  .home-contact-cards {
-    justify-content: flex-start;
-  }
-
-  .home-nav {
-    gap: 1.5rem;
-  }
+.product-features {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
 }
 
-@media (max-width: 860px) {
-  .home-contact-panel,
-  .home-topbar,
-  .home-header,
-  .home-hero {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.product-features li {
+  margin: 0;
+  padding-left: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  position: relative;
+}
 
-  .home-hero {
-    min-height: auto;
-    padding-top: 2.5rem;
-  }
+.product-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #0d4bcc;
+  border-radius: 50%;
+}
 
-  .home-hero-copy h1 {
-    font-size: clamp(2.5rem, 7vw, 4.25rem);
+@media (max-width: 1120px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 720px) {
-  .home-topbar,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
   .home-contact-panel,
-  .home-header,
-  .home-hero {
+  .home-nav,
+  .home-topbar {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .home-contact-panel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .home-contact-cards {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .home-nav {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .home-hero-copy h1 {
-    font-size: clamp(2rem, 8vw, 3.4rem);
   }
 }

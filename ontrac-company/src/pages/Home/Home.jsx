@@ -71,11 +71,11 @@ export default function Home() {
           <a className="home-nav-link" href="/about">
             ABOUT US
           </a>
+          <a className="home-nav-link" href="/products">
+            OUR PRODUCTS
+          </a>
           <a className="home-nav-link" href="#solutions">
             OUR STRUCTURED SOLUTIONS
-          </a>
-          <a className="home-nav-link" href="#products">
-            OUR PRODUCTS
           </a>
           <a className="home-nav-link" href="/contact">
             CONTACT US
@@ -94,7 +94,7 @@ export default function Home() {
             <p className="home-description">
               We provide construction materials and solutions from structure to finishing — including insulation, flooring, tiles, adhesives and final project details.
             </p>
-            <a className="home-cta" href="#products">
+            <a className="home-cta" href="/products">
               EXPLORE OUR PRODUCTS <FaArrowRight className="home-cta-icon" />
             </a>
           </div>

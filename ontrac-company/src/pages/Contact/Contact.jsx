@@ -78,8 +78,8 @@ export default function Contact() {
         <nav className="home-nav">
           <a className="home-nav-link" href="/">HOME</a>
           <a className="home-nav-link" href="/about">ABOUT US</a>
+          <a className="home-nav-link" href="/products">OUR PRODUCTS</a>
           <a className="home-nav-link" href="#solutions">OUR STRUCTURED SOLUTIONS</a>
-          <a className="home-nav-link" href="#products">OUR PRODUCTS</a>
           <a className="home-nav-link active" href="/contact">CONTACT US</a>
         </nav>
 
