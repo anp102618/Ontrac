@@ -68,7 +68,7 @@ export default function Home() {
           <a className="home-nav-link active" href="#">
             HOME
           </a>
-          <a className="home-nav-link" href="#about">
+          <a className="home-nav-link" href="/about">
             ABOUT US
           </a>
           <a className="home-nav-link" href="#solutions">
