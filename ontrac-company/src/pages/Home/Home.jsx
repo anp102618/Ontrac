@@ -77,7 +77,7 @@ export default function Home() {
           <a className="home-nav-link" href="#products">
             OUR PRODUCTS
           </a>
-          <a className="home-nav-link" href="#contact">
+          <a className="home-nav-link" href="/contact">
             CONTACT US
           </a>
         </nav>

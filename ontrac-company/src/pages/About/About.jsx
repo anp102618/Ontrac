@@ -11,6 +11,7 @@ import {
   FaShieldAlt,
   FaLightbulb,
   FaHandshake,
+  FaLinkedin,
 } from "react-icons/fa";
 
 export default function About() {
@@ -33,6 +34,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="home-topbar-link"
             >
+              <FaLinkedin />
               linkedin.com/in/ontrac-company
             </a>
           </div>
