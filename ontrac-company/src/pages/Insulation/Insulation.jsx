@@ -1,75 +1,96 @@
 import "../Home/Home.css";
-import "./StructuralWork.css";
+import "./Insulation.css";
+
 import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 import logo from "../../assets/logo/logo.png";
-import concrete1 from "../../assets/Structure/concrete1.jpg";
-import concrete2 from "../../assets/Structure/concrete2.jpg";
-import steel1 from "../../assets/Structure/steel1.jpg";
-import steel2 from "../../assets/Structure/steel2.jpg";
-import reinforcement1 from "../../assets/Structure/reinforcement1.jpg";
-import reinforcement2 from "../../assets/Structure/reinforcement2.jpg";
-import building1 from "../../assets/Structure/building1.jpg";
-import building2 from "../../assets/Structure/building2.jpg";
+
+import thermal1 from "../../assets/Insulation/insulation1.jpg";
+import thermal2 from "../../assets/Insulation/insulation2.jpg";
+import waterproof1 from "../../assets/Insulation/waterproofing1.jpg";
+import waterproof2 from "../../assets/Insulation/waterproofing2.jpg";
+import protection1 from "../../assets/Insulation/protection1.jpg";
+import protection2 from "../../assets/Insulation/protection2.jpg";
+
 import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
   FaClock,
   FaLinkedin,
-  FaHardHat,
-  FaCube,
-  FaLayerGroup,
+  FaSnowflake,
+  FaTint,
   FaShieldAlt,
 } from "react-icons/fa";
 
-const structuralSections = [
+const protectionSections = [
   {
-    title: "Concrete Solutions",
-    icon: <FaCube />,
+    title: "Thermal Insulation",
+    icon: <FaSnowflake />,
     description:
-      "High-performance concrete products designed for strong and durable foundations, slabs, columns, beams, and structural frameworks.",
-    types: ["Ready-Mix Concrete (RMC)", "Cement", "Concrete Blocks", "Precast Concrete Elements", "Mortar & Grouting Materials"],
-    images: [concrete1, concrete2],
+      "High-performance insulation materials that improve energy efficiency, regulate indoor temperatures, and reduce heat transfer for greater comfort and lower energy consumption.",
+    types: [
+      "Insulation Boards",
+      "Reflective Insulation",
+      "Mineral Wool",
+      "Spray Foam Insulation",
+      "Glass Wool",
+      "Pipe & Duct Insulation",
+    ],
+    images: [thermal1, thermal2],
   },
   {
-    title: "Steel Products",
-    icon: <FaHardHat />,
+    title: "Waterproofing Solutions",
+    icon: <FaTint />,
     description:
-      "Premium-grade structural steel that provides superior load-bearing capacity, flexibility, and long-term reliability.",
-    types: ["Structural Steel Sections", "Steel Beams", "Steel Columns", "Steel Plates", "Steel Channels & Angles"],
-    images: [steel1, steel2],
+      "Reliable waterproofing systems designed to prevent water penetration, moisture damage, and structural deterioration across various building applications.",
+    types: [
+      "Waterproofing Membranes",
+      "Liquid Waterproofing Coatings",
+      "Cementitious Waterproofing",
+      "Bituminous Membranes",
+      "PU Waterproofing Systems",
+      "Joint Sealants",
+    ],
+    images: [waterproof1, waterproof2],
   },
   {
-    title: "Reinforcement Materials",
+    title: "Building Protection",
     icon: <FaShieldAlt />,
     description:
-      "Engineered reinforcement products that enhance concrete strength, improve structural performance, and increase resistance to tension and cracking.",
-    types: ["TMT Reinforcement Bars", "Reinforcement Mesh", "Binding Wire", "Couplers", "Rebar Accessories"],
-    images: [reinforcement1, reinforcement2],
-  },
-  {
-    title: "Structural Building Materials",
-    icon: <FaLayerGroup />,
-    description:
-      "Essential construction materials that support the overall structural framework and ensure project quality from foundation to completion.",
-    types: ["Bricks & Blocks", "Aggregates", "Sand", "Waterproofing Materials", "Construction Chemicals", "Formwork & Shuttering Materials"],
-    images: [building1, building2],
+      "Protective products that enhance the lifespan of buildings by resisting corrosion, weathering, chemical exposure, and physical wear.",
+    types: [
+      "Protective Coatings",
+      "Fire Protection Systems",
+      "Anti-Corrosion Coatings",
+      "Expansion Joint Systems",
+      "Surface Sealers",
+      "Protective Construction Chemicals",
+    ],
+    images: [protection1, protection2],
   },
 ];
 
-export default function StructuralWork() {
+export default function ProtectionInsulation() {
   return (
-    <main className="structural-work-page" style={{ backgroundImage: `url(${solutionsBg})` }}>
+    <main
+      className="structural-work-page"
+      style={{ backgroundImage: `url(${solutionsBg})` }}
+    >
       <div className="structural-work-overlay">
+
+        {/* Top Bar */}
+
         <div className="home-topbar">
           <div className="home-topbar-item">
             <FaEnvelope />
             ontrac.company2023@gmail.com
           </div>
+
           <div className="home-topbar-item home-topbar-center">
             <FaPhone />
             CALL US ON: +(212)6 63 51 26 21
           </div>
+
           <div className="home-topbar-item home-topbar-right">
             <a
               href="https://linkedin.com/in/ontrac-company"
@@ -83,82 +104,148 @@ export default function StructuralWork() {
           </div>
         </div>
 
+        {/* Contact Panel */}
+
         <section className="home-contact-panel">
-          <a className="home-brand" href="#">
+          <a className="home-brand" href="/">
             <img className="home-logo" src={logo} alt="Ontrac Company" />
           </a>
+
           <div className="home-contact-cards">
+
             <div className="home-contact-card">
               <div className="home-contact-icon">
                 <FaMapMarkerAlt />
               </div>
+
               <div>
                 <p className="home-contact-label">OUR LOCATION</p>
                 <p className="home-contact-value">Settat, Casablanca</p>
               </div>
             </div>
+
             <div className="home-contact-card">
               <div className="home-contact-icon">
                 <FaPhone />
               </div>
+
               <div>
                 <p className="home-contact-label">PHONE NUMBER</p>
-                <p className="home-contact-value">+(212)6 63 51 26 21</p>
+                <p className="home-contact-value">
+                  +(212)6 63 51 26 21
+                </p>
               </div>
             </div>
+
             <div className="home-contact-card">
               <div className="home-contact-icon">
                 <FaClock />
               </div>
+
               <div>
                 <p className="home-contact-label">BUSINESS HOURS</p>
-                <p className="home-contact-value">Mo - Sun: 8:00 AM - 8:00 PM</p>
+                <p className="home-contact-value">
+                  Mo - Sun: 8:00 AM - 8:00 PM
+                </p>
               </div>
             </div>
+
           </div>
         </section>
 
+        {/* Navigation */}
+
         <nav className="home-nav">
-          <a className="home-nav-link" href="/">HOME</a>
-          <a className="home-nav-link" href="/about">ABOUT US</a>
-          <a className="home-nav-link" href="/products">OUR PRODUCTS</a>
+          <a className="home-nav-link" href="/">
+            HOME
+          </a>
+
+          <a className="home-nav-link" href="/about">
+            ABOUT US
+          </a>
+
+          <a className="home-nav-link" href="/products">
+            OUR PRODUCTS
+          </a>
+
           <div className="home-nav-item">
+
             <a className="home-nav-link nav-link-dropdown" href="#solutions">
               OUR STRUCTURED SOLUTIONS
             </a>
+
             <div className="nav-dropdown">
-              <a href="/structural-work">Structural work</a>
-              <a href="/protection-insulation">Protection & Insulation</a>
-              <a href="/walls-surfaces">Walls & Surfaces</a>
-              <a href="/tiles-flooring">Tiles & Flooring</a>
-              <a href="/final-details">Final details</a>
+
+              <a href="/structural-work">
+                Structural Work
+              </a>
+
+              <a href="/protection-insulation">
+                Protection & Insulation
+              </a>
+
+              <a href="/walls-surfaces">
+                Walls & Surfaces
+              </a>
+
+              <a href="/tiles-flooring">
+                Tiles & Flooring
+              </a>
+
+              <a href="/final-details">
+                Final Details
+              </a>
+
             </div>
+
           </div>
-          <a className="home-nav-link" href="/contact">CONTACT US</a>
+
+          <a className="home-nav-link" href="/contact">
+            CONTACT US
+          </a>
+
         </nav>
 
+        {/* Hero */}
+
         <section className="structural-work-hero">
+
           <div className="structural-work-hero-copy">
+
             <h1>
-              <span className="structural-black">Structural</span>{" "}
-              <span className="structural-blue">Work</span>
+              <span className="structural-black">Protection</span>
+              <span className="protection-blue">&nbsp;&amp;&nbsp;Insulation</span>
             </h1>
+
             <p>
-              Our structural solutions provide the essential materials required to create safe, stable, and durable buildings. We supply high-quality construction products that meet industry standards, ensuring long-term strength and structural integrity for residential, commercial, and industrial projects.
+              Our protection and insulation solutions are designed to enhance
+              energy efficiency, prevent water and moisture infiltration, and
+              safeguard structures from harsh environmental conditions. We
+              provide high-quality materials that improve building performance,
+              durability, and long-term reliability.
             </p>
+
           </div>
+
         </section>
 
+        {/* Content */}
+
         <section className="structural-work-content">
-          {structuralSections.map((section) => (
+
+          {protectionSections.map((section) => (
+
             <article className="structural-card" key={section.title}>
+
               <div className="structural-images">
                 <img src={section.images[0]} alt={section.title} />
                 <img src={section.images[1]} alt={`${section.title} 2`} />
               </div>
 
               <div className="structural-info">
+
                 <div className="structural-title">
+
                   <div className="structural-icon">
                     {section.icon}
                   </div>
@@ -167,6 +254,7 @@ export default function StructuralWork() {
                     <h2>{section.title}</h2>
                     <div className="title-line"></div>
                   </div>
+
                 </div>
 
                 <p className="structural-description">
@@ -178,10 +266,15 @@ export default function StructuralWork() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+
               </div>
+
             </article>
+
           ))}
+
         </section>
+
       </div>
     </main>
   );

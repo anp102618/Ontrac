@@ -1,5 +1,5 @@
 /* =====================================================
-   Structural Work Hero
+   Protection & Insulation Hero
    (Matches Our Products)
 ===================================================== */
 
@@ -8,7 +8,7 @@
 }
 
 .structural-work-hero-copy {
-  max-width: 700px;
+  max-width: 760px;
 }
 
 /* =====================================================
@@ -29,35 +29,29 @@
   text-transform: uppercase;
 }
 
-.structural-black {
+.walls-black {
   position: relative;
   color: #0b1120;
 }
 
-.structural-black::after {
+.walls-black::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: -14px;
-
   width: 1em;
   height: 5px;
-
   background: #0d4bcc;
-
   border-radius: 999px;
 }
 
-.structural-blue {
+.walls-blue {
   color: #0d4bcc;
 }
-
 .structural-work-hero-copy p {
   margin: 2rem 0 0;
 
-  max-width: 620px;
+  max-width: 720px;
 
   color: #111827;
 
@@ -67,7 +61,6 @@
 
   font-weight: 600;
 }
-
 
 /* =====================================================
    Content
@@ -89,7 +82,6 @@
 
   gap: 3rem;
 }
-
 
 /* =====================================================
    Card
@@ -126,7 +118,6 @@
 
 }
 
-
 /* =====================================================
    Images
 ===================================================== */
@@ -158,7 +149,6 @@
 
 }
 
-
 /* =====================================================
    Right Side
 ===================================================== */
@@ -172,7 +162,6 @@
   justify-content: center;
 
 }
-
 
 /* =====================================================
    Title
@@ -240,7 +229,6 @@
 
 }
 
-
 /* =====================================================
    Description
 ===================================================== */
@@ -259,7 +247,6 @@
 
 }
 
-
 /* =====================================================
    List
 ===================================================== */
@@ -274,7 +261,7 @@
 
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
 
   gap: 1rem 2.5rem;
 
@@ -313,7 +300,6 @@
   background: #0d4bcc;
 
 }
-
 
 /* =====================================================
    Responsive
