@@ -172,7 +172,7 @@ export default function WallsSurfaces() {
               <a href="/protection-insulation">Protection & Insulation</a>
               <a href="/walls-surfaces">Walls & Surfaces</a>
               <a href="/tiles-flooring">Tiles & Flooring</a>
-              <a href="/final-details">Final Details</a>
+              <a href="/final-details">Finishing</a>
             </div>
 
           </div>

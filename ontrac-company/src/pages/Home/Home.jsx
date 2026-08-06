@@ -83,7 +83,7 @@ export default function Home() {
               <a href="#protection-insulation">Protection & Insulation</a>
               <a href="#walls-surfaces">Walls & Surfaces</a>
               <a href="#tiles-flooring">Tiles & Flooring</a>
-              <a href="#final-details">Final details</a>
+              <a href="#final-details">Finishing</a>
             </div>
           </div>
           <a className="home-nav-link" href="/contact">

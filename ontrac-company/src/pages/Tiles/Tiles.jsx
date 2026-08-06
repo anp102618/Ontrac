@@ -1,15 +1,17 @@
 import "../Home/Home.css";
-import "./Insulation.css";
+import "./Tiles.css";
 
 import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 import logo from "../../assets/logo/logo.png";
 
-import thermal1 from "../../assets/Insulation/insulation1.jpg";
-import thermal2 from "../../assets/Insulation/insulation2.jpg";
-import waterproof1 from "../../assets/Insulation/waterproofing1.jpg";
-import waterproof2 from "../../assets/Insulation/waterproofing2.jpg";
-import protection1 from "../../assets/Insulation/protection1.jpg";
-import protection2 from "../../assets/Insulation/protection2.jpg";
+import adhesive1 from "../../assets/Tiles/adhesive1.jpg";
+import adhesive2 from "../../assets/Tiles/adhesive2.jpg";
+import grout1 from "../../assets/Tiles/grout1.jpg";
+import grout2 from "../../assets/Tiles/grout2.jpg";
+import flooring1 from "../../assets/Tiles/flooring1.jpg";
+import flooring2 from "../../assets/Tiles/flooring2.jpg";
+import ceramic1 from "../../assets/Tiles/ceramic1.jpg";
+import ceramic2 from "../../assets/Tiles/ceramic2.jpg";
 
 import {
   FaEnvelope,
@@ -17,60 +19,79 @@ import {
   FaMapMarkerAlt,
   FaClock,
   FaLinkedin,
-  FaSnowflake,
-  FaTint,
-  FaShieldAlt,
+  FaThLarge,
+  FaGripHorizontal,
+  FaLayerGroup,
+  FaBorderAll,
 } from "react-icons/fa";
 
-const protectionSections = [
+const tileSections = [
   {
-    title: "Thermal Insulation",
-    icon: <FaSnowflake />,
+    title: "Tile Adhesives",
+    icon: <FaThLarge />,
     description:
-      "High-performance insulation materials that improve energy efficiency, regulate indoor temperatures, and reduce heat transfer for greater comfort and lower energy consumption.",
+      "Advanced bonding solutions designed for secure tile installation, excellent grip, and long-lasting performance across various surfaces.",
     types: [
-      "Insulation Boards",
-      "Reflective Insulation",
-      "Mineral Wool",
-      "Spray Foam Insulation",
-      "Glass Wool",
-      "Pipe & Duct Insulation",
+      "Cement-Based Tile Adhesives",
+      "Ready-Mix Tile Adhesives",
+      "Wall & Floor Tile Adhesives",
+      "Large Format Tile Adhesives",
+      "Stone & Marble Adhesives",
+      "Flexible Tile Adhesives",
     ],
-    images: [thermal1, thermal2],
+    images: [adhesive1, adhesive2],
   },
+
   {
-    title: "Waterproofing Solutions",
-    icon: <FaTint />,
+    title: "Grouts",
+    icon: <FaGripHorizontal />,
     description:
-      "Reliable waterproofing systems designed to prevent water penetration, moisture damage, and structural deterioration across various building applications.",
+      "High-quality grouting solutions that provide strong joint filling, moisture resistance, and a clean, finished appearance.",
     types: [
-      "Waterproofing Membranes",
-      "Liquid Waterproofing Coatings",
-      "Cementitious Waterproofing",
-      "Bituminous Membranes",
-      "PU Waterproofing Systems",
-      "Joint Sealants",
+      "Cement Grouts",
+      "Epoxy Grouts",
+      "Waterproof Grouts",
+      "Colored Grouts",
+      "Tile Joint Fillers",
+      "High-Performance Grouts",
     ],
-    images: [waterproof1, waterproof2],
+    images: [grout1, grout2],
   },
+
   {
-    title: "Building Protection",
-    icon: <FaShieldAlt />,
+    title: "Flooring Solutions",
+    icon: <FaLayerGroup />,
     description:
-      "Protective products that enhance the lifespan of buildings by resisting corrosion, weathering, chemical exposure, and physical wear.",
+      "Durable flooring systems designed to meet functional, aesthetic, and performance requirements for different environments.",
     types: [
-      "Protective Coatings",
-      "Fire Protection Systems",
-      "Anti-Corrosion Coatings",
-      "Expansion Joint Systems",
-      "Surface Sealers",
-      "Protective Construction Chemicals",
+      "Concrete Flooring",
+      "Epoxy Flooring",
+      "Industrial Flooring",
+      "Decorative Flooring",
+      "Self-Leveling Flooring",
+      "Commercial Flooring Systems",
     ],
-    images: [protection1, protection2],
+    images: [flooring1, flooring2],
+  },
+
+  {
+    title: "Ceramic Products",
+    icon: <FaBorderAll />,
+    description:
+      "Quality ceramic materials offering strength, easy maintenance, and attractive finishes for interior and exterior applications.",
+    types: [
+      "Ceramic Tiles",
+      "Porcelain Tiles",
+      "Wall Tiles",
+      "Floor Tiles",
+      "Decorative Tiles",
+      "Outdoor Tiles",
+    ],
+    images: [ceramic1, ceramic2],
   },
 ];
 
-export default function ProtectionInsulation() {
+export default function TilesFlooring() {
   return (
     <main
       className="structural-work-page"
@@ -104,7 +125,7 @@ export default function ProtectionInsulation() {
           </div>
         </div>
 
-        {/* Contact Panel */}
+        {/* Contact */}
 
         <section className="home-contact-panel">
           <a className="home-brand" href="/">
@@ -120,7 +141,9 @@ export default function ProtectionInsulation() {
 
               <div>
                 <p className="home-contact-label">OUR LOCATION</p>
-                <p className="home-contact-value">Settat, Casablanca</p>
+                <p className="home-contact-value">
+                  Settat, Casablanca
+                </p>
               </div>
             </div>
 
@@ -143,7 +166,9 @@ export default function ProtectionInsulation() {
               </div>
 
               <div>
-                <p className="home-contact-label">BUSINESS HOURS</p>
+                <p className="home-contact-label">
+                  BUSINESS HOURS
+                </p>
                 <p className="home-contact-value">
                   Mo - Sun: 8:00 AM - 8:00 PM
                 </p>
@@ -156,90 +181,64 @@ export default function ProtectionInsulation() {
         {/* Navigation */}
 
         <nav className="home-nav">
-          <a className="home-nav-link" href="/">
-            HOME
-          </a>
-
-          <a className="home-nav-link" href="/about">
-            ABOUT US
-          </a>
-
-          <a className="home-nav-link" href="/products">
-            OUR PRODUCTS
-          </a>
+          <a className="home-nav-link" href="/">HOME</a>
+          <a className="home-nav-link" href="/about">ABOUT US</a>
+          <a className="home-nav-link" href="/products">OUR PRODUCTS</a>
 
           <div className="home-nav-item">
-
             <a className="home-nav-link nav-link-dropdown" href="#solutions">
               OUR STRUCTURED SOLUTIONS
             </a>
 
             <div className="nav-dropdown">
-
-              <a href="/structural-work">
-                Structural Work
-              </a>
-
-              <a href="/protection-insulation">
-                Protection & Insulation
-              </a>
-
-              <a href="/walls-surfaces">
-                Walls & Surfaces
-              </a>
-
-              <a href="/tiles-flooring">
-                Tiles & Flooring
-              </a>
-
-              <a href="/final-details">
-                Finishing
-              </a>
-
+              <a href="/structural-work">Structural Work</a>
+              <a href="/protection-insulation">Protection & Insulation</a>
+              <a href="/walls-surfaces">Walls & Surfaces</a>
+              <a href="/tiles-flooring">Tiles & Flooring</a>
+              <a href="/final-details">Finishing</a>
             </div>
-
           </div>
 
           <a className="home-nav-link" href="/contact">
             CONTACT US
           </a>
-
         </nav>
 
         {/* Hero */}
 
         <section className="structural-work-hero">
-
           <div className="structural-work-hero-copy">
 
             <h1>
-              <span className="structural-black">Protection</span>
-              <span className="protection-blue">&nbsp;&amp;&nbsp;Insulation</span>
+              <span className="tiles-black">Tiles</span>
+              <span className="tiles-blue">
+                &nbsp;&amp;&nbsp;Flooring
+              </span>
             </h1>
 
             <p>
-              Our protection and insulation solutions are designed to enhance
-              energy efficiency, prevent water and moisture infiltration, and
-              safeguard structures from harsh environmental conditions. We
-              provide high-quality materials that improve building performance,
-              durability, and long-term reliability.
+              Our tiles and flooring solutions are designed to provide strong
+              adhesion, superior durability, and high-quality finishes for
+              residential, commercial, and industrial spaces. From tile
+              installation materials to complete flooring systems, we deliver
+              products that enhance performance, appearance, and long-term
+              value.
             </p>
 
           </div>
-
         </section>
 
-        {/* Content */}
+        {/* Cards */}
 
         <section className="structural-work-content">
 
-          {protectionSections.map((section) => (
+          {tileSections.map((section) => (
 
             <article className="structural-card" key={section.title}>
 
               <div className="structural-images">
                 <img src={section.images[0]} alt={section.title} />
-                <img src={section.images[1]} alt={`${section.title} 2`} />
+                <img src={section.images[1]} alt={section.title} />
               </div>
 
               <div className="structural-info">

@@ -1,15 +1,15 @@
 import "../Home/Home.css";
-import "./Insulation.css";
+import "./Finishing.css";
 
 import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 import logo from "../../assets/logo/logo.png";
 
-import thermal1 from "../../assets/Insulation/insulation1.jpg";
-import thermal2 from "../../assets/Insulation/insulation2.jpg";
-import waterproof1 from "../../assets/Insulation/waterproofing1.jpg";
-import waterproof2 from "../../assets/Insulation/waterproofing2.jpg";
-import protection1 from "../../assets/Insulation/protection1.jpg";
-import protection2 from "../../assets/Insulation/protection2.jpg";
+import coating1 from "../../assets/Finishing/coating1.jpg";
+import coating2 from "../../assets/Finishing/coating2.jpg";
+import decorative1 from "../../assets/Finishing/decoration1.jpg";
+import decorative2 from "../../assets/Finishing/decoration2.jpg";
+import finishing1 from "../../assets/Finishing/final1.jpg";
+import finishing2 from "../../assets/Finishing/final2.jpg";
 
 import {
   FaEnvelope,
@@ -17,60 +17,62 @@ import {
   FaMapMarkerAlt,
   FaClock,
   FaLinkedin,
-  FaSnowflake,
-  FaTint,
-  FaShieldAlt,
+  FaPaintRoller,
+  FaPalette,
+  FaHome,
 } from "react-icons/fa";
 
-const protectionSections = [
+const finishingSections = [
   {
-    title: "Thermal Insulation",
-    icon: <FaSnowflake />,
+    title: "Coatings",
+    icon: <FaPaintRoller />,
     description:
-      "High-performance insulation materials that improve energy efficiency, regulate indoor temperatures, and reduce heat transfer for greater comfort and lower energy consumption.",
+      "High-quality coating solutions designed to protect surfaces, improve durability, and provide attractive finishes for interior and exterior applications.",
     types: [
-      "Insulation Boards",
-      "Reflective Insulation",
-      "Mineral Wool",
-      "Spray Foam Insulation",
-      "Glass Wool",
-      "Pipe & Duct Insulation",
-    ],
-    images: [thermal1, thermal2],
-  },
-  {
-    title: "Waterproofing Solutions",
-    icon: <FaTint />,
-    description:
-      "Reliable waterproofing systems designed to prevent water penetration, moisture damage, and structural deterioration across various building applications.",
-    types: [
-      "Waterproofing Membranes",
-      "Liquid Waterproofing Coatings",
-      "Cementitious Waterproofing",
-      "Bituminous Membranes",
-      "PU Waterproofing Systems",
-      "Joint Sealants",
-    ],
-    images: [waterproof1, waterproof2],
-  },
-  {
-    title: "Building Protection",
-    icon: <FaShieldAlt />,
-    description:
-      "Protective products that enhance the lifespan of buildings by resisting corrosion, weathering, chemical exposure, and physical wear.",
-    types: [
+      "Interior Paint Coatings",
+      "Exterior Paint Coatings",
       "Protective Coatings",
-      "Fire Protection Systems",
-      "Anti-Corrosion Coatings",
-      "Expansion Joint Systems",
-      "Surface Sealers",
-      "Protective Construction Chemicals",
+      "Anti-Microbial Coatings",
+      "Weather-Resistant Coatings",
+      "Floor Coatings",
     ],
-    images: [protection1, protection2],
+    images: [coating1, coating2],
+  },
+
+  {
+    title: "Decorative Finishes",
+    icon: <FaPalette />,
+    description:
+      "Creative finishing solutions that enhance the visual appeal and character of spaces through unique textures, colors, and design elements.",
+    types: [
+      "Texture Finishes",
+      "Decorative Paints",
+      "Wall Effects",
+      "Stone & Wood Finishes",
+      "Designer Coatings",
+      "Feature Wall Finishes",
+    ],
+    images: [decorative1, decorative2],
+  },
+
+  {
+    title: "Final Details",
+    icon: <FaHome />,
+    description:
+      "Complete interior solutions that add functionality, comfort, and style while delivering a refined finished environment.",
+    types: [
+      "Doors & Frames",
+      "Modular Kitchens",
+      "Custom Furniture",
+      "Wooden Partitions",
+      "Cupboards & Storage Solutions",
+      "Dressing Rooms & Interior Furnishings",
+    ],
+    images: [finishing1, finishing2],
   },
 ];
 
-export default function ProtectionInsulation() {
+export default function FinalDetails() {
   return (
     <main
       className="structural-work-page"
@@ -78,7 +80,7 @@ export default function ProtectionInsulation() {
     >
       <div className="structural-work-overlay">
 
-        {/* Top Bar */}
+        {/* ---------- Top Bar ---------- */}
 
         <div className="home-topbar">
           <div className="home-topbar-item">
@@ -104,11 +106,11 @@ export default function ProtectionInsulation() {
           </div>
         </div>
 
-        {/* Contact Panel */}
+        {/* ---------- Contact ---------- */}
 
         <section className="home-contact-panel">
           <a className="home-brand" href="/">
-            <img className="home-logo" src={logo} alt="Ontrac Company" />
+            <img src={logo} className="home-logo" alt="Ontrac Company" />
           </a>
 
           <div className="home-contact-cards">
@@ -153,93 +155,69 @@ export default function ProtectionInsulation() {
           </div>
         </section>
 
-        {/* Navigation */}
+        {/* ---------- Navigation ---------- */}
 
         <nav className="home-nav">
-          <a className="home-nav-link" href="/">
-            HOME
-          </a>
-
-          <a className="home-nav-link" href="/about">
-            ABOUT US
-          </a>
-
-          <a className="home-nav-link" href="/products">
-            OUR PRODUCTS
-          </a>
+          <a className="home-nav-link" href="/">HOME</a>
+          <a className="home-nav-link" href="/about">ABOUT US</a>
+          <a className="home-nav-link" href="/products">OUR PRODUCTS</a>
 
           <div className="home-nav-item">
-
             <a className="home-nav-link nav-link-dropdown" href="#solutions">
               OUR STRUCTURED SOLUTIONS
             </a>
 
             <div className="nav-dropdown">
-
-              <a href="/structural-work">
-                Structural Work
-              </a>
-
-              <a href="/protection-insulation">
-                Protection & Insulation
-              </a>
-
-              <a href="/walls-surfaces">
-                Walls & Surfaces
-              </a>
-
-              <a href="/tiles-flooring">
-                Tiles & Flooring
-              </a>
-
-              <a href="/final-details">
-                Finishing
-              </a>
-
+              <a href="/structural-work">Structural Work</a>
+              <a href="/protection-insulation">Protection & Insulation</a>
+              <a href="/walls-surfaces">Walls & Surfaces</a>
+              <a href="/tiles-flooring">Tiles & Flooring</a>
+              <a href="/final-details">Finishing</a>
             </div>
-
           </div>
 
           <a className="home-nav-link" href="/contact">
             CONTACT US
           </a>
-
         </nav>
 
-        {/* Hero */}
+        {/* ---------- Hero ---------- */}
 
         <section className="structural-work-hero">
 
           <div className="structural-work-hero-copy">
 
             <h1>
-              <span className="structural-black">Protection</span>
-              <span className="protection-blue">&nbsp;&amp;&nbsp;Insulation</span>
+              <h1>
+            <span className="finishing-black">Finishing</span>
+            <span className="finishing-blue">&nbsp;Details</span>
+            </h1>
             </h1>
 
             <p>
-              Our protection and insulation solutions are designed to enhance
-              energy efficiency, prevent water and moisture infiltration, and
-              safeguard structures from harsh environmental conditions. We
-              provide high-quality materials that improve building performance,
-              durability, and long-term reliability.
+              Our finishing solutions bring together functionality,
+              aesthetics, and quality to transform structures into complete
+              living and working spaces. From protective coatings and
+              decorative finishes to customized interior elements, we provide
+              solutions that enhance appearance, comfort, and long-term
+              performance.
             </p>
 
           </div>
 
         </section>
 
-        {/* Content */}
+        {/* ---------- Cards ---------- */}
 
         <section className="structural-work-content">
 
-          {protectionSections.map((section) => (
+          {finishingSections.map((section) => (
 
             <article className="structural-card" key={section.title}>
 
               <div className="structural-images">
                 <img src={section.images[0]} alt={section.title} />
-                <img src={section.images[1]} alt={`${section.title} 2`} />
+                <img src={section.images[1]} alt={section.title} />
               </div>
 
               <div className="structural-info">

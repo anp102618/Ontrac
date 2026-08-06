@@ -6,6 +6,8 @@ import Contact from "../pages/Contact/Contact";
 import StructuralWork from "../pages/StructuralWork/StructuralWork";
 import Insulation from "../pages/Insulation/Insulation";
 import Surfaces from "../pages/Surfaces/Surfaces";
+import Tiles from "../pages/Tiles/Tiles";
+import Finishing from "../pages/Finishing/Finishing";
 
 export default function AppRoutes() {
   return (
@@ -17,6 +19,8 @@ export default function AppRoutes() {
       <Route path="/structural-work" element={<StructuralWork />} />
       <Route path="/protection-insulation" element={<Insulation />} />
       <Route path="/walls-surfaces" element={<Surfaces />} />
+      <Route path="/tiles-flooring" element={<Tiles />} />
+      <Route path="/final-details" element={<Finishing />} />
     </Routes>
   );
 }
