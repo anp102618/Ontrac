@@ -17,6 +17,50 @@
   padding: 4rem 2.5rem 5rem;
 }
 
+.home-nav-item {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 0;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: #071e52;
+  border-radius: 18px;
+  padding: 0.75rem 0;
+  box-shadow: 0 20px 60px rgba(7, 30, 82, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+  z-index: 20;
+}
+
+.home-nav-item:hover .nav-dropdown,
+.home-nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 0.85rem 1.25rem;
+  color: #e6eeff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: background 150ms ease;
+}
+
+.nav-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .about-hero-copy {
   max-width: 760px;
   background: rgba(255,255,255,0.0);

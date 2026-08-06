@@ -79,7 +79,18 @@ export default function About() {
           <a className="home-nav-link" href="/">HOME</a>
           <a className="home-nav-link active" href="/about">ABOUT US</a>
           <a className="home-nav-link" href="/products">OUR PRODUCTS</a>
-          <a className="home-nav-link" href="#solutions">OUR STRUCTURED SOLUTIONS</a>
+          <div className="home-nav-item">
+            <a className="home-nav-link nav-link-dropdown" href="#solutions">
+              OUR STRUCTURED SOLUTIONS
+            </a>
+            <div className="nav-dropdown">
+              <a href="#structural-work">Structural work</a>
+              <a href="#protection-insulation">Protection & Insulation</a>
+              <a href="#walls-surfaces">Walls & Surfaces</a>
+              <a href="#tiles-flooring">Tiles & Flooring</a>
+              <a href="#final-details">Final details</a>
+            </div>
+          </div>
           <a className="home-nav-link" href="#contact">CONTACT US</a>
         </nav>
 
