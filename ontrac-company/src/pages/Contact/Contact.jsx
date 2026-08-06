@@ -108,7 +108,7 @@ export default function Contact() {
             <h2>GET IN TOUCH</h2>
             <div className="card-divider" />
             <div className="contact-detail">
-              <div className="detail-icon"><FaUser /></div>
+              
               
             </div>
             <div className="contact-detail">
@@ -175,7 +175,7 @@ export default function Contact() {
                 <div className="map-pin"> </div>
               </div>
             </div>
-            <p className="location-line">Settat, Casablanca</p>
+            <p className="location-line">Mediouna, Casablanca</p>
             <p className="location-line">Morocco</p>
           </div>
         </section>
