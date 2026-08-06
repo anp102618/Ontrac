@@ -1,6 +1,6 @@
 import "../Home/Home.css";
 import "./StructuralWork.css";
-import solutionsBg from "../../assets/logo/solutions_bg.png";
+import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 import logo from "../../assets/logo/logo.png";
 import concrete1 from "../../assets/Structure/concrete1.jpg";
 import concrete2 from "../../assets/Structure/concrete2.jpg";
@@ -140,7 +140,8 @@ export default function StructuralWork() {
         <section className="structural-work-hero">
           <div className="structural-work-hero-copy">
             <h1>
-              <span>STRUCTURAL</span> WORK
+              <span className="structural-black">Structural</span>{" "}
+              <span className="structural-blue">Work</span>
             </h1>
             <p>
               Our structural solutions provide the essential materials required to create safe, stable, and durable buildings. We supply high-quality construction products that meet industry standards, ensuring long-term strength and structural integrity for residential, commercial, and industrial projects.
@@ -150,25 +151,33 @@ export default function StructuralWork() {
 
         <section className="structural-work-content">
           {structuralSections.map((section) => (
-            <article className="structural-section-card" key={section.title}>
-              <div className="structural-media-row">
+            <article className="structural-card" key={section.title}>
+              <div className="structural-images">
                 <img src={section.images[0]} alt={section.title} />
-                <img src={section.images[1]} alt={`${section.title} detail`} />
+                <img src={section.images[1]} alt={`${section.title} 2`} />
               </div>
-              <div className="structural-section-body">
-                <div className="structural-section-title">
-                  <span className="structural-section-icon">{section.icon}</span>
-                  <h2>{section.title}</h2>
+
+              <div className="structural-info">
+                <div className="structural-title">
+                  <div className="structural-icon">
+                    {section.icon}
+                  </div>
+
+                  <div>
+                    <h2>{section.title}</h2>
+                    <div className="title-line"></div>
+                  </div>
                 </div>
-                <p>{section.description}</p>
-                <div className="structural-types">
-                  <h3>Types</h3>
-                  <ul>
-                    {section.types.map((type) => (
-                      <li key={type}>{type}</li>
-                    ))}
-                  </ul>
-                </div>
+
+                <p className="structural-description">
+                  {section.description}
+                </p>
+
+                <ul className="structural-list">
+                  {section.types.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </article>
           ))}

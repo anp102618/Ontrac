@@ -1,151 +1,395 @@
-.structural-work-page {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center top;
-}
-
-.structural-work-overlay {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 250, 255, 0.96) 100%);
-}
+/* =====================================================
+   Structural Work Hero
+   (Matches Our Products)
+===================================================== */
 
 .structural-work-hero {
-  padding: 4rem 4rem 0;
+  padding: 4rem 2rem 2rem;
 }
 
 .structural-work-hero-copy {
-  max-width: 920px;
+  max-width: 620px;
 }
 
+/* ===========================
+   Hero Heading
+=========================== */
+
 .structural-work-hero-copy h1 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
   margin: 0;
-  font-size: clamp(2.8rem, 4.6vw, 4rem);
+
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.95;
+
   font-weight: 900;
+
   text-transform: uppercase;
+}
+
+.structural-black {
+  position: relative;
   color: #0b1120;
 }
 
-.structural-work-hero-copy h1 span {
+.structural-black::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -14px;
+
+  width: 1.05em;
+
+  height: 5px;
+
+  background: #0d4bcc;
+
+  border-radius: 999px;
+}
+
+.structural-blue {
   color: #0d4bcc;
 }
 
 .structural-work-hero-copy p {
-  margin: 1.25rem 0 0;
-  max-width: 700px;
+  margin: 2rem 0 0;
+
+  max-width: 560px;
+
   color: #111827;
+
   font-size: 1.05rem;
+
   line-height: 1.8;
+
   font-weight: 600;
 }
 
+
+/* =====================================================
+   Content Section
+===================================================== */
+
 .structural-work-content {
-  max-width: 1280px;
   width: 100%;
-  margin: 2rem auto 4rem;
-  padding: 0 4rem;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+/* =====================================================
+   Card
+===================================================== */
+
+.structural-card {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: 250px 250px 1fr;
+  align-items: center;
+  gap: 1.75rem;
+
+  padding: 1.75rem;
+
+  background: rgba(235, 244, 255, 0.95);
+
+  border: 1px solid rgba(13, 75, 204, 0.12);
+
+  border-radius: 28px;
+
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.structural-section-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 24px;
-  box-shadow: 0 20px 70px rgba(15, 23, 42, 0.12);
-  overflow: hidden;
+.structural-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 34px 90px rgba(15, 23, 42, 0.16);
 }
 
-.structural-media-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 1.25rem;
+
+/* =====================================================
+   Images
+===================================================== */
+
+.structural-images {
+  display: contents;
 }
 
-.structural-media-row img {
+.structural-images img {
   width: 100%;
-  height: 260px;
+  height: 230px;
+
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+
+  border-radius: 24px;
+
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+
+  transition: transform .25s ease;
 }
 
-.structural-section-body {
-  padding: 0 1.5rem 1.75rem;
+.structural-card:hover .structural-images img {
+  transform: scale(1.02);
 }
 
-.structural-section-title {
+
+/* =====================================================
+   Right Side
+===================================================== */
+
+.structural-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* =====================================================
+   Title
+===================================================== */
+
+.structural-title {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.75rem;
+  gap: 1rem;
 }
 
-.structural-section-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
+.structural-icon {
+  width: 64px;
+  height: 64px;
+
   display: grid;
   place-items: center;
-  background: rgba(13, 75, 204, 0.12);
-  color: #0d4bcc;
-  font-size: 1rem;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #0d4bcc, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: 1.5rem;
+
+  flex-shrink: 0;
 }
 
-.structural-section-title h2 {
+.structural-title h2 {
   margin: 0;
-  font-size: 1.35rem;
+
+  font-size: 1.45rem;
+
   font-weight: 900;
+
+  letter-spacing: .04em;
+
   text-transform: uppercase;
+
   color: #0b1120;
 }
 
-.structural-section-body p {
-  margin: 0 0 1rem;
-  color: #334155;
-  font-size: 0.98rem;
-  line-height: 1.75;
+.title-line {
+  width: 60px;
+  height: 4px;
+
+  margin-top: .6rem;
+
+  background: #0d4bcc;
+
+  border-radius: 999px;
 }
 
-.structural-types h3 {
-  margin: 0 0 0.6rem;
+
+/* =====================================================
+   Description
+===================================================== */
+
+.structural-description {
+  margin: 1.15rem 0 1.4rem;
+
+  color: #475569;
+
   font-size: 1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #0d4bcc;
+
+  line-height: 1.8;
+
+  font-weight: 500;
 }
 
-.structural-types ul {
+
+/* =====================================================
+   List
+===================================================== */
+
+.structural-list {
   margin: 0;
-  padding-left: 1.1rem;
+  padding: 0;
+
+  list-style: none;
+
   display: grid;
-  gap: 0.45rem;
-  color: #334155;
-  font-size: 0.95rem;
-  line-height: 1.65;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: .85rem 2rem;
 }
 
-@media (max-width: 900px) {
-  .structural-media-row {
+.structural-list li {
+  position: relative;
+
+  padding-left: 1.3rem;
+
+  color: #1f2937;
+
+  font-size: .96rem;
+
+  font-weight: 700;
+}
+
+.structural-list li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: .52rem;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #0d4bcc;
+}
+
+
+/* =====================================================
+   Responsive
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .structural-card {
+    grid-template-columns: 220px 220px 1fr;
+  }
+
+  .structural-images img {
+    height: 210px;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .structural-work-hero {
+    padding: 3rem 2rem 1.5rem;
+  }
+
+  .structural-work-content {
+    padding: 2rem;
+  }
+
+  .structural-card {
     grid-template-columns: 1fr;
   }
 
-  .structural-work-content {
-    padding: 0 1.5rem 3rem;
+  .structural-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
+
+  .structural-images img {
+    height: 240px;
+  }
+
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+
   .structural-work-hero {
-    padding: 3rem 1.5rem 0;
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+
+  .structural-work-copy {
+    max-width: 100%;
+  }
+
+  .structural-work-hero-copy h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .structural-black::after {
+    bottom: -10px;
+    height: 4px;
+  }
+
+  .structural-work-hero-copy p {
+    max-width: 100%;
+    font-size: 1rem;
   }
 
   .structural-work-content {
-    padding: 0 1.5rem 3rem;
+    padding: 1.5rem;
   }
 
-  .structural-media-row img {
+  .structural-list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .structural-work-hero {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .structural-work-hero-copy h1 {
+    font-size: 2.2rem;
+    flex-wrap: wrap;
+  }
+
+  .structural-black::after {
+    width: 1em;
+    bottom: -8px;
+    height: 4px;
+  }
+
+  .structural-work-hero-copy p {
+    margin-top: 1.5rem;
+    font-size: .95rem;
+  }
+
+  .structural-images {
+    grid-template-columns: 1fr;
+  }
+
+  .structural-images img {
     height: 220px;
   }
+
+  .structural-title {
+    align-items: flex-start;
+  }
+
+  .structural-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.3rem;
+  }
+
+  .structural-title h2 {
+    font-size: 1.2rem;
+  }
+
 }
