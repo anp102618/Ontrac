@@ -50,7 +50,7 @@
 .contact-hero-copy h1 { font-size: clamp(3.2rem, 5vw, 4.8rem); margin: 0; line-height: 0.95; text-transform: uppercase; font-weight: 900; color: #0b1120; }
 .contact-hero-copy h1 span:not(.contact-underline) { color: #0d4bcc; }
 .contact-underline { position: relative; display: inline-block; color: #000000; }
-.contact-underline::after { content: ""; position: absolute; left: 0; right: 0; bottom: -0.12em; height: 0.08em; background: #0d4bcc; border-radius: 99px; }
+.contact-underline::after { content: ""; position: absolute; left: 0; right: 0; bottom: -0.12em; height: 0.08em; background: #0d4bcc !important; border-radius: 99px; }
 .contact-hero-copy p { margin: 1.5rem 0 0; max-width: 560px; color: #111827; font-size: 1.1rem; line-height: 1.75; font-weight: 600; }
 
 .contact-cards-row { display: grid; grid-template-columns: 1.2fr 1.4fr 0.9fr; gap: 1.5rem; max-width: 1280px; width: 100%; margin: 2.5rem auto 4rem; padding: 0 4rem; }

@@ -242,7 +242,7 @@
   width: 140px;
   height: 4px;
   margin: 1.75rem 0 1rem;
-  background: #0d4bcc;
+  background: #0d4bcc !important;
   border-radius: 999px;
 }
 

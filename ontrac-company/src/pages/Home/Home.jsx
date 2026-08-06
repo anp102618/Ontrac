@@ -79,7 +79,7 @@ export default function Home() {
               OUR STRUCTURED SOLUTIONS
             </a>
             <div className="nav-dropdown">
-              <a href="#structural-work">Structural work</a>
+              <a href="/structural-work">Structural work</a>
               <a href="#protection-insulation">Protection & Insulation</a>
               <a href="#walls-surfaces">Walls & Surfaces</a>
               <a href="#tiles-flooring">Tiles & Flooring</a>
