@@ -142,7 +142,7 @@ export default function TilesFlooring() {
               <div>
                 <p className="home-contact-label">OUR LOCATION</p>
                 <p className="home-contact-value">
-                  Settat, Casablanca
+                  Mediouna, Casablanca
                 </p>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function TilesFlooring() {
                   BUSINESS HOURS
                 </p>
                 <p className="home-contact-value">
-                  Mo - Sun: 8:00 AM - 8:00 PM
+                  Mon - Fri: 8:30 AM - 5:00 PM
                 </p>
               </div>
             </div>

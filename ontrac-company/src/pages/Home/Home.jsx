@@ -40,7 +40,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="home-contact-label">OUR LOCATION</p>
-                <p className="home-contact-value">Settat, Casablanca</p>
+                <p className="home-contact-value">Mediouna, Casablanca</p>
               </div>
             </div>
             <div className="home-contact-card">
@@ -58,7 +58,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="home-contact-label">BUSINESS HOURS</p>
-                <p className="home-contact-value">Mo - Sun: 8:00 AM - 8:00 PM</p>
+                <p className="home-contact-value">Mon - fri: 8:30 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
@@ -80,10 +80,10 @@ export default function Home() {
             </a>
             <div className="nav-dropdown">
               <a href="/structural-work">Structural work</a>
-              <a href="#protection-insulation">Protection & Insulation</a>
-              <a href="#walls-surfaces">Walls & Surfaces</a>
-              <a href="#tiles-flooring">Tiles & Flooring</a>
-              <a href="#final-details">Finishing</a>
+              <a href="/protection-insulation">Protection & Insulation</a>
+              <a href="/walls-surfaces">Walls & Surfaces</a>
+              <a href="/tiles-flooring">Tiles & Flooring</a>
+              <a href="/final-details">Finishing</a>
             </div>
           </div>
           <a className="home-nav-link" href="/contact">

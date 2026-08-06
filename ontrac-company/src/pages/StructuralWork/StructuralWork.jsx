@@ -94,7 +94,7 @@ export default function StructuralWork() {
               </div>
               <div>
                 <p className="home-contact-label">OUR LOCATION</p>
-                <p className="home-contact-value">Settat, Casablanca</p>
+                <p className="home-contact-value">Mediouna, Casablanca</p>
               </div>
             </div>
             <div className="home-contact-card">
@@ -112,7 +112,7 @@ export default function StructuralWork() {
               </div>
               <div>
                 <p className="home-contact-label">BUSINESS HOURS</p>
-                <p className="home-contact-value">Mo - Sun: 8:00 AM - 8:00 PM</p>
+                <p className="home-contact-value">Mon - Fri: 8:30 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
