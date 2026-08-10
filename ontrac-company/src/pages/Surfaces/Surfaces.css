@@ -1,7 +1,17 @@
 /* =====================================================
-   Protection & Insulation Hero
-   (Matches Our Products)
-===================================================== */
+   Walls & Surfaces Page
+   ===================================================== */
+
+/* =====================================================
+   Header
+   ===================================================== */
+
+@import "../../components/Header/Header.css";
+
+
+/* =====================================================
+   Walls & Surfaces Hero
+   ===================================================== */
 
 .structural-work-hero {
   padding: 4rem 2rem 2rem;
@@ -11,9 +21,10 @@
   max-width: 760px;
 }
 
+
 /* =====================================================
    Hero Heading
-===================================================== */
+   ===================================================== */
 
 .structural-work-hero-copy h1 {
   display: flex;
@@ -29,25 +40,52 @@
   text-transform: uppercase;
 }
 
+
+/* =====================================================
+   Walls
+   ===================================================== */
+
 .walls-black {
   position: relative;
   color: #0b1120;
 }
 
+
+/*
+   Blue underline under the
+   first THREE letters: "WAL"
+*/
+
 .walls-black::after {
   content: "";
+
   position: absolute;
+
   left: 0;
   bottom: -14px;
-  width: 1em;
+
+  width: 1.0em;
   height: 5px;
+
   background: #0d4bcc;
+
   border-radius: 999px;
 }
+
+
+/* =====================================================
+   Surfaces
+   ===================================================== */
 
 .walls-blue {
   color: #0d4bcc;
 }
+
+
+/* =====================================================
+   Hero Description
+   ===================================================== */
+
 .structural-work-hero-copy p {
   margin: 2rem 0 0;
 
@@ -62,12 +100,12 @@
   font-weight: 600;
 }
 
+
 /* =====================================================
    Content
-===================================================== */
+   ===================================================== */
 
 .structural-work-content {
-
   width: 100%;
 
   max-width: 1750px;
@@ -83,12 +121,12 @@
   gap: 3rem;
 }
 
+
 /* =====================================================
    Card
-===================================================== */
+   ===================================================== */
 
 .structural-card {
-
   display: grid;
 
   grid-template-columns: 330px 330px 1fr;
@@ -99,37 +137,35 @@
 
   padding: 2.5rem;
 
-  background: rgba(235, 244, 255, .95);
+  background: rgba(235, 244, 255, 0.95);
 
-  border: 1px solid rgba(13, 75, 204, .12);
+  border: 1px solid rgba(13, 75, 204, 0.12);
 
   border-radius: 32px;
 
-  box-shadow: 0 24px 70px rgba(15, 23, 42, .12);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
 
-  transition: .25s;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .structural-card:hover {
-
   transform: translateY(-8px);
 
-  box-shadow: 0 40px 100px rgba(15, 23, 42, .18);
-
+  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.18);
 }
+
 
 /* =====================================================
    Images
-===================================================== */
+   ===================================================== */
 
 .structural-images {
-
   display: contents;
-
 }
 
 .structural-images img {
-
   width: 100%;
 
   height: 300px;
@@ -138,47 +174,47 @@
 
   border-radius: 24px;
 
-  box-shadow: 0 20px 45px rgba(15, 23, 42, .15);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
 
-  transition: .25s;
+  transition: transform 0.25s ease;
 }
 
 .structural-card:hover .structural-images img {
-
   transform: scale(1.03);
-
 }
+
 
 /* =====================================================
    Right Side
-===================================================== */
+   ===================================================== */
 
 .structural-info {
-
   display: flex;
 
   flex-direction: column;
 
   justify-content: center;
-
 }
 
+
 /* =====================================================
-   Title
-===================================================== */
+   Section Title
+   ===================================================== */
 
 .structural-title {
-
   display: flex;
 
   align-items: center;
 
   gap: 1rem;
-
 }
 
-.structural-icon {
 
+/* =====================================================
+   Section Icon
+   ===================================================== */
+
+.structural-icon {
   width: 72px;
 
   height: 72px;
@@ -189,52 +225,61 @@
 
   border-radius: 22px;
 
-  background: linear-gradient(135deg,#0d4bcc,#1d4ed8);
+  background: linear-gradient(
+    135deg,
+    #0d4bcc,
+    #1d4ed8
+  );
 
-  color: #fff;
+  color: #ffffff;
 
   font-size: 1.7rem;
 
   flex-shrink: 0;
-
 }
 
-.structural-title h2 {
 
+/* =====================================================
+   Section Heading
+   ===================================================== */
+
+.structural-title h2 {
   margin: 0;
 
   font-size: 1.65rem;
 
   font-weight: 900;
 
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 
   text-transform: uppercase;
 
   color: #0b1120;
-
 }
 
-.title-line {
 
+/* =====================================================
+   Title Line
+   ===================================================== */
+
+.title-line {
   width: 70px;
 
   height: 4px;
 
-  margin-top: .7rem;
+  margin-top: 0.7rem;
 
   background: #0d4bcc;
 
   border-radius: 999px;
-
 }
+
 
 /* =====================================================
    Description
-===================================================== */
+   ===================================================== */
 
 .structural-description {
-
   margin: 1.4rem 0 1.6rem;
 
   color: #475569;
@@ -244,15 +289,14 @@
   line-height: 1.9;
 
   font-weight: 500;
-
 }
 
+
 /* =====================================================
-   List
-===================================================== */
+   Product List
+   ===================================================== */
 
 .structural-list {
-
   margin: 0;
 
   padding: 0;
@@ -261,14 +305,12 @@
 
   display: grid;
 
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   gap: 1rem 2.5rem;
-
 }
 
 .structural-list li {
-
   position: relative;
 
   padding-left: 1.4rem;
@@ -278,18 +320,21 @@
   font-size: 1rem;
 
   font-weight: 700;
-
 }
 
-.structural-list li::before {
 
+/* =====================================================
+   Blue Bullet
+   ===================================================== */
+
+.structural-list li::before {
   content: "";
 
   position: absolute;
 
   left: 0;
 
-  top: .55rem;
+  top: 0.55rem;
 
   width: 8px;
 
@@ -298,147 +343,125 @@
   border-radius: 50%;
 
   background: #0d4bcc;
-
 }
+
 
 /* =====================================================
    Responsive
-===================================================== */
+   ===================================================== */
 
-@media (max-width:1500px){
-
-  .structural-card{
-
-    grid-template-columns:280px 280px 1fr;
-
+@media (max-width: 1500px) {
+  .structural-card {
+    grid-template-columns: 280px 280px 1fr;
   }
-
 }
 
-@media (max-width:1200px){
 
-  .structural-card{
+/* =====================================================
+   Medium Desktop
+   ===================================================== */
 
-    grid-template-columns:240px 240px 1fr;
-
+@media (max-width: 1200px) {
+  .structural-card {
+    grid-template-columns: 240px 240px 1fr;
   }
 
-  .structural-images img{
-
-    height:250px;
-
+  .structural-images img {
+    height: 250px;
   }
-
 }
 
-@media (max-width:992px){
 
-  .structural-work-hero{
+/* =====================================================
+   Tablet
+   ===================================================== */
 
-    padding:3rem 2rem 1.5rem;
-
+@media (max-width: 992px) {
+  .structural-work-hero {
+    padding: 3rem 2rem 1.5rem;
   }
 
-  .structural-work-content{
-
-    padding:2rem;
-
+  .structural-work-content {
+    padding: 2rem;
   }
 
-  .structural-card{
-
-    grid-template-columns:1fr;
-
+  .structural-card {
+    grid-template-columns: 1fr;
   }
 
-  .structural-images{
+  .structural-images {
+    display: grid;
 
-    display:grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    grid-template-columns:repeat(2,1fr);
-
-    gap:1.5rem;
-
+    gap: 1.5rem;
   }
 
-  .structural-images img{
-
-    height:260px;
-
+  .structural-images img {
+    height: 260px;
   }
-
 }
 
-@media (max-width:768px){
 
-  .structural-work-hero{
+/* =====================================================
+   Mobile
+   ===================================================== */
 
-    padding:2.5rem 1.5rem;
-
+@media (max-width: 768px) {
+  .structural-work-hero {
+    padding: 2.5rem 1.5rem;
   }
 
-  .structural-work-hero-copy h1{
-
-    font-size:clamp(2.5rem,8vw,3.5rem);
-
+  .structural-work-hero-copy h1 {
+    font-size: clamp(
+      2.5rem,
+      8vw,
+      3.5rem
+    );
   }
 
-  .structural-work-content{
-
-    padding:1.5rem;
-
+  .structural-work-content {
+    padding: 1.5rem;
   }
 
-  .structural-list{
-
-    grid-template-columns:1fr;
-
+  .structural-list {
+    grid-template-columns: 1fr;
   }
-
 }
 
-@media (max-width:576px){
 
-  .structural-work-hero{
+/* =====================================================
+   Small Mobile
+   ===================================================== */
 
-    padding:2rem 1rem;
-
+@media (max-width: 576px) {
+  .structural-work-hero {
+    padding: 2rem 1rem;
   }
 
-  .structural-work-hero-copy h1{
+  .structural-work-hero-copy h1 {
+    flex-wrap: wrap;
 
-    flex-wrap:wrap;
-
-    font-size:2.3rem;
-
+    font-size: 2.3rem;
   }
 
-  .structural-images{
-
-    grid-template-columns:1fr;
-
+  .structural-images {
+    grid-template-columns: 1fr;
   }
 
-  .structural-images img{
-
-    height:220px;
-
+  .structural-images img {
+    height: 220px;
   }
 
-  .structural-icon{
+  .structural-icon {
+    width: 60px;
 
-    width:60px;
+    height: 60px;
 
-    height:60px;
-
-    font-size:1.4rem;
-
+    font-size: 1.4rem;
   }
 
-  .structural-title h2{
-
-    font-size:1.3rem;
-
+  .structural-title h2 {
+    font-size: 1.3rem;
   }
-
 }

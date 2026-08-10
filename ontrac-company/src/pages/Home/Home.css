@@ -1,3 +1,7 @@
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
 .home-page {
   min-height: 100vh;
   background-size: cover;
@@ -12,209 +16,17 @@
   background: transparent;
 }
 
-.home-topbar {
-  display: grid;
-  grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #0d4bcc;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
-}
 
-.home-topbar-item {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.home-topbar-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.home-topbar-link svg {
-  width: 1rem;
-  height: 1rem;
-  color: #ffffff;
-}
-
-.home-topbar-center {
-  justify-content: center;
-}
-
-.home-topbar-right {
-  justify-content: flex-end;
-  gap: 0.85rem;
-  font-weight: 700;
-}
-
-.home-contact-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.8rem 2rem;
-  background: #eef4ff;
-  min-height: 150px;
-  border-radius: 32px;
-  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
-}
-
-.home-brand {
-  display: inline-flex;
-  align-items: center;
-}
-
-.home-logo {
-  height: 150px;
-  width: auto;
-}
-
-.home-contact-cards {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
-  align-items: stretch;
-}
-
-.home-contact-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.15rem 1.3rem;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
-  border-radius: 22px;
-  min-width: 210px;
-}
-
-.home-contact-icon {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(13, 75, 204, 0.15);
-  color: #0d4bcc;
-  font-size: 1.1rem;
-}
-
-.home-contact-label {
-  margin: 0;
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #475569;
-  font-weight: 700;
-}
-
-.home-contact-value {
-  margin: 0.25rem 0 0;
-  font-size: 1rem;
-  font-weight: 800;
-  color: #0b1120;
-  line-height: 1.4;
-}
-
-.home-header {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  background: #000000;
-}
-
-.home-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.75rem;
-  padding: 1rem 2.5rem;
-  background: #000000;
-}
-
-.home-nav-item {
-  position: relative;
-}
-
-.nav-dropdown {
-  position: absolute;
-  top: calc(100% + 0.75rem);
-  left: 0;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  background: #071e52;
-  border-radius: 18px;
-  padding: 0.75rem 0;
-  box-shadow: 0 20px 60px rgba(7, 30, 82, 0.25);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
-  z-index: 20;
-}
-
-.home-nav-item:hover .nav-dropdown,
-.home-nav-item:focus-within .nav-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.nav-dropdown a {
-  display: block;
-  padding: 0.85rem 1.25rem;
-  color: #e6eeff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  transition: background 150ms ease;
-}
-
-.nav-dropdown a:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.home-nav-link {
-  position: relative;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  padding-bottom: 0.25rem;
-  transition: color 150ms ease, transform 150ms ease;
-}
-
-.home-nav-link.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.45rem;
-  height: 3px;
-  background: #ffffff;
-  border-radius: 999px;
-}
-
-.home-nav-link:hover {
-  color: #1d4ed8;
-  transform: translateY(-1px);
-}
+/* =========================================================
+   HOME HERO
+========================================================= */
 
 .home-hero {
   display: flex;
   align-items: center;
+
   min-height: calc(100vh - 230px);
+
   padding: 4rem 2.5rem 5rem;
 }
 
@@ -224,67 +36,129 @@
   text-align: left;
 }
 
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
 .home-hero-copy h1 {
+  margin: 0;
+
   font-size: clamp(3.5rem, 6vw, 6rem);
   line-height: 0.88;
-  margin: 0;
+
   letter-spacing: -0.05em;
   text-transform: uppercase;
+
   color: #0b1120;
-  font-weight: 900;
+
+  /*
+    Reduced from 900 to make the heading
+    slightly cleaner and less heavy.
+  */
+  font-weight: 800;
 }
 
-.home-hero-copy span {
+.home-hero-copy h1 span {
   color: #0d4bcc;
 }
+
+
+/* =========================================================
+   HERO DIVIDER
+========================================================= */
 
 .home-divider {
   width: 140px;
   height: 4px;
+
   margin: 1.75rem 0 1rem;
-  background: #0d4bcc !important;
+
+  background: #0d4bcc;
   border-radius: 999px;
 }
 
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
 .home-tagline {
   margin: 0;
+
   font-size: 1.12rem;
-  color: #0b1120;
-  font-weight: 800;
-  letter-spacing: 0.02em;
   line-height: 1.5;
+
+  color: #0b1120;
+
+  /*
+    Reduced weight for a softer appearance.
+  */
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
 }
 
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
 .home-description {
-  margin: 1.5rem 0 2.5rem;
   max-width: 46rem;
-  line-height: 1.75;
-  color: #1f2937;
+
+  margin: 1.5rem 0 2.5rem;
+
   font-size: 1.03rem;
-  font-weight: 600;
+  line-height: 1.75;
+
+  color: #1f2937;
+
+  font-weight: 500;
+
   letter-spacing: 0.01em;
 }
+
+
+/* =========================================================
+   EXPLORE PRODUCTS BUTTON
+========================================================= */
 
 .home-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 0.75rem;
+
+  padding: 1rem 1.75rem;
+
   background: #0d4bcc;
   color: #ffffff;
-  padding: 1rem 1.75rem;
+
   border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.95rem;
-  font-weight: 800;
+
   text-decoration: none;
-  transition: transform 180ms ease, background 180ms ease;
+
+  text-transform: uppercase;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .home-cta:hover {
   transform: translateY(-2px);
+
   background: #2563eb;
+
+  box-shadow: 0 10px 25px rgba(13, 75, 204, 0.22);
 }
 
 .home-cta-icon {
@@ -292,62 +166,151 @@
   height: 1rem;
 }
 
-@media (max-width: 1040px) {
-  .home-contact-cards {
-    justify-content: flex-start;
-  }
 
-  .home-nav {
-    gap: 1.5rem;
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1040px) {
+  .home-hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET
+========================================================= */
+
 @media (max-width: 860px) {
-  .home-contact-panel,
-  .home-topbar,
-  .home-header,
   .home-hero {
+    min-height: auto;
+
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  .home-hero {
-    min-height: auto;
-    padding-top: 2.5rem;
+  .home-hero-copy {
+    max-width: 650px;
   }
 
   .home-hero-copy h1 {
     font-size: clamp(2.5rem, 7vw, 4.25rem);
   }
+
+  .home-tagline {
+    font-size: 1.05rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .home-cta {
+    font-size: 0.9rem;
+  }
 }
 
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
 @media (max-width: 720px) {
-  .home-topbar,
-  .home-contact-panel,
-  .home-header,
   .home-hero {
+    min-height: auto;
+
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .home-contact-panel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .home-contact-cards {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .home-nav {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
+  .home-hero-copy {
+    max-width: 100%;
   }
 
   .home-hero-copy h1 {
     font-size: clamp(2rem, 8vw, 3.4rem);
+
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+  }
+
+  .home-divider {
+    width: 110px;
+
+    margin-top: 1.5rem;
+  }
+
+  .home-tagline {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .home-description {
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    font-weight: 500;
+  }
+
+  .home-cta {
+    padding: 0.9rem 1.4rem;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .home-hero-copy h1 {
+    font-size: clamp(1.9rem, 9vw, 2.8rem);
+  }
+
+  .home-divider {
+    width: 90px;
+    height: 3px;
+
+    margin: 1.25rem 0 0.85rem;
+  }
+
+  .home-tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .home-description {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .home-cta {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0.85rem 1rem;
+
+    font-size: 0.78rem;
   }
 }
