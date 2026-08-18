@@ -8,6 +8,8 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <main
@@ -52,14 +54,14 @@ export default function Home() {
               flooring, tiles, adhesives and final project details.
             </p>
 
-            <a
+            <Link
               className="home-cta"
-              href="/products"
+              to="/products"
             >
               EXPLORE OUR PRODUCTS
 
               <FaArrowRight className="home-cta-icon" />
-            </a>
+            </Link>
 
           </div>
 
