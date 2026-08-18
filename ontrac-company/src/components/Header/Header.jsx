@@ -1,4 +1,3 @@
-
 import "./Header.css";
 
 import logo from "../../assets/logo/logo.png";
@@ -11,13 +10,23 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
+import { Link, useLocation } from "react-router-dom";
+
 export default function Header() {
-  // Get the current URL path
-  const currentPath = window.location.pathname;
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const isActive = (path) => {
     return currentPath === path;
   };
+
+  const isSolutionActive = [
+    "/structural-work",
+    "/protection-insulation",
+    "/walls-surfaces",
+    "/tiles-flooring",
+    "/final-details",
+  ].includes(currentPath);
 
   return (
     <>
@@ -58,13 +67,13 @@ export default function Header() {
 
       <section className="home-contact-panel">
 
-        <a className="home-brand" href="/">
+        <Link className="home-brand" to="/">
           <img
             className="home-logo"
             src={logo}
             alt="Ontrac Company"
           />
-        </a>
+        </Link>
 
         <div className="home-contact-cards">
 
@@ -143,83 +152,77 @@ export default function Header() {
 
         {/* HOME */}
 
-        <a
+        <Link
           className={`home-nav-link ${
             isActive("/") ? "active" : ""
           }`}
-          href="/"
+          to="/"
         >
           HOME
-        </a>
+        </Link>
 
 
         {/* ABOUT US */}
 
-        <a
+        <Link
           className={`home-nav-link ${
             isActive("/about") ? "active" : ""
           }`}
-          href="/about"
+          to="/about"
         >
           ABOUT US
-        </a>
+        </Link>
 
 
         {/* OUR PRODUCTS */}
 
-        <a
+        <Link
           className={`home-nav-link ${
             isActive("/products") ? "active" : ""
           }`}
-          href="/products"
+          to="/products"
         >
           OUR PRODUCTS
-        </a>
+        </Link>
 
 
         {/* STRUCTURED SOLUTIONS */}
 
         <div className="home-nav-item">
 
-          <a
+          <Link
             className={`home-nav-link nav-link-dropdown ${
-              currentPath === "/structural-work" ||
-              currentPath === "/protection-insulation" ||
-              currentPath === "/walls-surfaces" ||
-              currentPath === "/tiles-flooring" ||
-              currentPath === "/final-details"
-                ? "active"
-                : ""
+              isSolutionActive ? "active" : ""
             }`}
-            href="#solutions"
+            to="/structural-work"
           >
             OUR SOLUTIONS
-          </a>
+          </Link>
 
 
           {/* DROPDOWN */}
 
           <div className="nav-dropdown">
 
-            <a href="/structural-work">
+            <Link to="/structural-work">
               Structural Work
-            </a>
+            </Link>
 
-            <a href="/protection-insulation">
+            <Link to="/protection-insulation">
               Protection & Insulation
-            </a>
+            </Link>
 
-            <a href="/walls-surfaces">
+            <Link to="/walls-surfaces">
               Walls & Surfaces
-            </a>
+            </Link>
 
-            <a href="/tiles-flooring">
+            <Link to="/tiles-flooring">
               Tiles & Flooring
-            </a>
+            </Link>
 
-            <a href="/final-details">
+            <Link to="/final-details">
               Finishing Details
-            </a>
+            </Link>
 
           </div>
 
@@ -228,28 +231,28 @@ export default function Header() {
 
         {/* CONTACT US */}
 
-        <a
+        <Link
           className={`home-nav-link ${
             isActive("/contact") ? "active" : ""
           }`}
-          href="/contact"
+          to="/contact"
         >
           CONTACT US
-        </a>
+        </Link>
 
-        {/* Testimonials */}
 
-        <a
+        {/* TESTIMONIALS */}
+
+        <Link
           className={`home-nav-link ${
             isActive("/testimonials") ? "active" : ""
           }`}
-          href="/testimonials"
+          to="/testimonials"
         >
           TESTIMONIALS
-        </a>
+        </Link>
 
       </nav>
     </>
   );
 }
-
