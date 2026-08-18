@@ -5,6 +5,8 @@ import productsImg from "../../assets/OurProducts/products.jpg";
 
 import Header from "../../components/Header/Header";
 
+import { Link } from "react-router-dom";
+
 import {
   FaCubes,
   FaShieldAlt,
@@ -34,27 +36,31 @@ export default function Products() {
 
         <section className="products-layout">
 
-          {/* =========================
+
+          {/* =================================================
               LEFT IMAGE
-          ========================= */}
+          ================================================= */}
 
           <div className="products-left">
+
             <img
               src={productsImg}
               alt="Our products"
             />
+
           </div>
 
 
-          {/* =========================
+          {/* =================================================
               RIGHT CONTENT
-          ========================= */}
+          ================================================= */}
 
           <div className="products-right">
 
-            {/* =========================
+
+            {/* =================================================
                 HERO
-            ========================= */}
+            ================================================= */}
 
             <div className="products-hero-copy">
 
@@ -79,14 +85,16 @@ export default function Products() {
 
             <div className="products-grid">
 
+
               {/* =================================================
                   STRUCTURE
               ================================================= */}
 
-              <a
-                href="/structural-work"
+              <Link
+                to="/structural-work"
                 className="product-card"
               >
+
                 <div className="product-card-header">
 
                   <div className="product-icon">
@@ -100,22 +108,37 @@ export default function Products() {
                 </div>
 
                 <ul className="product-features">
-                  <li>Concrete</li>
-                  <li>Steel</li>
-                  <li>Reinforcement</li>
-                  <li>Structural materials</li>
+
+                  <li>
+                    Concrete
+                  </li>
+
+                  <li>
+                    Steel
+                  </li>
+
+                  <li>
+                    Reinforcement
+                  </li>
+
+                  <li>
+                    Structural materials
+                  </li>
+
                 </ul>
-              </a>
+
+              </Link>
 
 
               {/* =================================================
                   PROTECTION & INSULATION
               ================================================= */}
 
-              <a
-                href="/protection-insulation"
+              <Link
+                to="/protection-insulation"
                 className="product-card"
               >
+
                 <div className="product-card-header">
 
                   <div className="product-icon">
@@ -129,21 +152,33 @@ export default function Products() {
                 </div>
 
                 <ul className="product-features">
-                  <li>Thermal insulation</li>
-                  <li>Waterproofing</li>
-                  <li>Building protection</li>
+
+                  <li>
+                    Thermal insulation
+                  </li>
+
+                  <li>
+                    Waterproofing
+                  </li>
+
+                  <li>
+                    Building protection
+                  </li>
+
                 </ul>
-              </a>
+
+              </Link>
 
 
               {/* =================================================
                   WALLS & SURFACES
               ================================================= */}
 
-              <a
-                href="/walls-surfaces"
+              <Link
+                to="/walls-surfaces"
                 className="product-card"
               >
+
                 <div className="product-card-header">
 
                   <div className="product-icon">
@@ -157,21 +192,33 @@ export default function Products() {
                 </div>
 
                 <ul className="product-features">
-                  <li>Mortars</li>
-                  <li>Plasters</li>
-                  <li>Surface preparation</li>
+
+                  <li>
+                    Mortars
+                  </li>
+
+                  <li>
+                    Plasters
+                  </li>
+
+                  <li>
+                    Surface preparation
+                  </li>
+
                 </ul>
-              </a>
+
+              </Link>
 
 
               {/* =================================================
                   TILES & FLOORING
               ================================================= */}
 
-              <a
-                href="/tiles-flooring"
+              <Link
+                to="/tiles-flooring"
                 className="product-card"
               >
+
                 <div className="product-card-header">
 
                   <div className="product-icon">
@@ -185,22 +232,37 @@ export default function Products() {
                 </div>
 
                 <ul className="product-features">
-                  <li>Tile adhesives</li>
-                  <li>Grouts</li>
-                  <li>Flooring solutions</li>
-                  <li>Ceramic products</li>
+
+                  <li>
+                    Tile adhesives
+                  </li>
+
+                  <li>
+                    Grouts
+                  </li>
+
+                  <li>
+                    Flooring solutions
+                  </li>
+
+                  <li>
+                    Ceramic products
+                  </li>
+
                 </ul>
-              </a>
+
+              </Link>
 
 
               {/* =================================================
                   FINISHING DETAILS
               ================================================= */}
 
-              <a
-                href="/final-details"
+              <Link
+                to="/final-details"
                 className="product-card"
               >
+
                 <div className="product-card-header">
 
                   <div className="product-icon">
@@ -214,11 +276,22 @@ export default function Products() {
                 </div>
 
                 <ul className="product-features">
-                  <li>Coatings</li>
-                  <li>Decorative finishes</li>
-                  <li>Final details</li>
+
+                  <li>
+                    Coatings
+                  </li>
+
+                  <li>
+                    Decorative finishes
+                  </li>
+
+                  <li>
+                    Final details
+                  </li>
+
                 </ul>
-              </a>
+
+              </Link>
 
             </div>
 
@@ -227,7 +300,7 @@ export default function Products() {
         </section>
 
       </div>
+
     </main>
   );
 }
-
