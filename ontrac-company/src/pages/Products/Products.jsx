@@ -1,7 +1,7 @@
 import "./Products.css";
 
 import productsBg from "../../assets/ourproducts/ourproducts_bg.png";
-import productsImg from "../../assets/ourproducts/products.jpeg";
+import productsImg from "../../assets/ourproducts/products.jpg";
 
 import Header from "../../components/Header/Header";
 
