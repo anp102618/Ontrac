@@ -9,6 +9,7 @@ import Surfaces from "../pages/Surfaces/Surfaces";
 import Tiles from "../pages/Tiles/Tiles";
 import Finishing from "../pages/Finishing/Finishing";
 import Testimonials from "../pages/Testimonials/Testimonials";
+import Concrete_Solutions from "../pages/Concrete_Solutions/Concrete_Solutions";
 
 export default function AppRoutes() {
   return (
@@ -23,6 +24,7 @@ export default function AppRoutes() {
       <Route path="/tiles-flooring" element={<Tiles />} />
       <Route path="/final-details" element={<Finishing />} />
       <Route path="/testimonials" element={<Testimonials />} />
+      <Route path="/concrete-solutions" element={<Concrete_Solutions />} />
     </Routes>
   );
 }

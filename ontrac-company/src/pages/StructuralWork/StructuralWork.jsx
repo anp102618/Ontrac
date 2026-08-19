@@ -17,6 +17,8 @@ import reinforcement2 from "../../assets/Structure/reinforcement2.jpg";
 import building1 from "../../assets/Structure/building1.jpg";
 import building2 from "../../assets/Structure/building2.jpg";
 
+import { Link } from "react-router-dom";
+
 import {
   FaHardHat,
   FaCube,
@@ -40,13 +42,16 @@ const structuralSections = [
 
     types: [
       "Ready-Mix Concrete (RMC)",
+      "Reinforcing Bars",
+      "Concrete Blocks & Structural Hollow Core Slabs",
       "Cement",
-      "Concrete Blocks",
-      "Precast Concrete Elements",
-      "Mortar & Grouting Materials",
+      "Concrete Ad-mixtures and Chemicals",
+      "Aggregates",
     ],
 
     images: [concrete1, concrete2],
+
+    link: "/concrete-solutions",
   },
 
   {
@@ -138,6 +143,7 @@ export default function StructuralWork() {
         <div className="structural-work-hero-copy">
 
           <h1>
+
             <span className="structural-black">
               Structural
             </span>
@@ -145,6 +151,7 @@ export default function StructuralWork() {
             <span className="structural-blue">
               Work
             </span>
+
           </h1>
 
           <p>
@@ -167,85 +174,129 @@ export default function StructuralWork() {
 
       <section className="structural-work-content">
 
-        {structuralSections.map((section) => (
+        {structuralSections.map((section) => {
 
-          <article
-            className="structural-card"
-            key={section.title}
-          >
+          /* =============================================
+             CARD CONTENT
+          ============================================= */
 
-            {/* =========================================
-                IMAGES
-            ========================================= */}
+          const cardContent = (
+            <>
 
-            <div className="structural-images">
+              {/* =========================================
+                  IMAGES
+              ========================================= */}
 
-              <img
-                src={section.images[0]}
-                alt={section.title}
-              />
+              <div className="structural-images">
 
-              <img
-                src={section.images[1]}
-                alt={`${section.title} 2`}
-              />
+                <img
+                  src={section.images[0]}
+                  alt={section.title}
+                />
 
-            </div>
-
-
-            {/* =========================================
-                INFORMATION
-            ========================================= */}
-
-            <div className="structural-info">
-
-              {/* TITLE */}
-
-              <div className="structural-title">
-
-                <div className="structural-icon">
-                  {section.icon}
-                </div>
-
-                <div>
-
-                  <h2>
-                    {section.title}
-                  </h2>
-
-                  <div className="title-line"></div>
-
-                </div>
+                <img
+                  src={section.images[1]}
+                  alt={`${section.title} 2`}
+                />
 
               </div>
 
 
-              {/* DESCRIPTION */}
+              {/* =========================================
+                  INFORMATION
+              ========================================= */}
 
-              <p className="structural-description">
-                {section.description}
-              </p>
+              <div className="structural-info">
+
+                {/* =======================================
+                    TITLE
+                ======================================= */}
+
+                <div className="structural-title">
+
+                  <div className="structural-icon">
+                    {section.icon}
+                  </div>
+
+                  <div>
+
+                    <h2>
+                      {section.title}
+                    </h2>
+
+                    <div className="title-line"></div>
+
+                  </div>
+
+                </div>
 
 
-              {/* TYPES */}
+                {/* =======================================
+                    DESCRIPTION
+                ======================================= */}
 
-              <ul className="structural-list">
+                <p className="structural-description">
+                  {section.description}
+                </p>
 
-                {section.types.map((item) => (
 
-                  <li key={item}>
-                    {item}
-                  </li>
+                {/* =======================================
+                    TYPES
+                ======================================= */}
 
-                ))}
+                <ul className="structural-list">
 
-              </ul>
+                  {section.types.map((item) => (
 
-            </div>
+                    <li key={item}>
+                      {item}
+                    </li>
 
-          </article>
+                  ))}
 
-        ))}
+                </ul>
+
+              </div>
+
+            </>
+          );
+
+
+          /* =============================================
+             LINKED CARD
+             Concrete Solutions
+          ============================================= */
+
+          if (section.link) {
+
+            return (
+              <Link
+                to={section.link}
+                className="structural-card structural-card-link"
+                key={section.title}
+              >
+                {cardContent}
+              </Link>
+            );
+
+          }
+
+
+          /* =============================================
+             NORMAL CARD
+             Other Structural Sections
+          ============================================= */
+
+          return (
+            <article
+              className="structural-card"
+              key={section.title}
+            >
+              {cardContent}
+            </article>
+          );
+
+        })}
 
       </section>
 

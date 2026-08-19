@@ -427,3 +427,21 @@
     font-size: 1.3rem;
   }
 }
+/* =====================================================
+   Structural Card Link
+   ===================================================== */
+
+.structural-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.structural-card-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.structural-card-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
