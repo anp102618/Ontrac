@@ -33,6 +33,16 @@ const testimonials = [
 
     icon: <FaUser />,
   },
+
+  {
+    id: 3,
+    client: "PURCHASING MANAGER, NOVAQUA",
+
+    text:
+      "What we value most is their reliability and professionalism. From order to delivery, the entire process is smooth, efficient, and well managed.",
+
+    icon: <FaUserTie />,
+  },
 ];
 
 

@@ -102,7 +102,7 @@ export default function Products() {
                   </div>
 
                   <h3>
-                    STRUCTURE
+                    STRUCTURAL WORK
                   </h3>
 
                 </div>
@@ -110,19 +110,27 @@ export default function Products() {
                 <ul className="product-features">
 
                   <li>
-                    Concrete
+                    Ready-Mix Concrete
                   </li>
 
                   <li>
-                    Steel
+                    Reinforcing Bars
                   </li>
 
                   <li>
-                    Reinforcement
+                    Cement
                   </li>
 
                   <li>
-                    Structural materials
+                    Concrete Blocks & Structural Hollow Core Slabs
+                  </li>
+
+                  <li>
+                    Aggregates
+                  </li>
+
+                  <li>
+                    Concrete Admixtures & Chemicals
                   </li>
 
                 </ul>

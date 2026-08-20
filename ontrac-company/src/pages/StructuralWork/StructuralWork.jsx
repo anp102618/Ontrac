@@ -5,123 +5,233 @@ import Header from "../../components/Header/Header";
 
 import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 
-import concrete1 from "../../assets/Structure/concrete1.jpg";
-import concrete2 from "../../assets/Structure/concrete2.jpg";
-
-import steel1 from "../../assets/Structure/steel1.jpg";
-import steel2 from "../../assets/Structure/steel2.jpg";
-
-import reinforcement1 from "../../assets/Structure/reinforcement1.jpg";
-import reinforcement2 from "../../assets/Structure/reinforcement2.jpg";
-
-import building1 from "../../assets/Structure/building1.jpg";
-import building2 from "../../assets/Structure/building2.jpg";
-
-import { Link } from "react-router-dom";
+import readyMixConcrete from "../../assets/Concrete_Solutions/ready_mix_concrete.jpg";
+import reinforcingBars from "../../assets/Concrete_Solutions/reinforcement_bar.jpg";
+import cement from "../../assets/Concrete_Solutions/cement.jpg";
+import concreteBlocks from "../../assets/Concrete_Solutions/concrete_blocks.jpg";
+import aggregates from "../../assets/Concrete_Solutions/aggregates.jpg";
+import concreteAdmixtures from "../../assets/Concrete_Solutions/admixtures.jpg";
 
 import {
-  FaHardHat,
   FaCube,
   FaLayerGroup,
-  FaShieldAlt,
+  FaIndustry,
+  FaCubes,
+  FaCircle,
+  FaFlask,
 } from "react-icons/fa";
 
 
 /* =====================================================
-   STRUCTURAL WORK DATA
+   CONCRETE SOLUTIONS DATA
 ===================================================== */
 
-const structuralSections = [
+const concreteSolutions = [
   {
-    title: "Concrete Solutions",
+    title: "Ready-Mix Concrete",
 
     icon: <FaCube />,
 
-    description:
-      "High-performance concrete products designed for strong and durable foundations, slabs, columns, beams, and structural frameworks.",
+    image: readyMixConcrete,
 
-    types: [
-      "Ready-Mix Concrete (RMC)",
-      "Reinforcing Bars",
-      "Concrete Blocks & Structural Hollow Core Slabs",
-      "Cement",
-      "Concrete Ad-mixtures and Chemicals",
-      "Aggregates",
-    ],
+    shortDescription:
+      "High-performance concrete products for foundations, slabs, columns, beams, and structural elements.",
 
-    images: [concrete1, concrete2],
+    content: (
+      <>
+        <p>
+          For your upcoming construction projects, we offer a complete range
+          of ready-mix concrete covering all regulatory strength classes,
+          from <strong>C20/25 to C35/45</strong>.
+        </p>
 
-    link: "/concrete-solutions",
+        <p>
+          These industrial formulations incorporate rigorous control of
+          workability and porosity to guarantee the durability of your
+          structures and the longevity of your reinforced concrete works.
+        </p>
+
+        <p>
+          Our technical advisors are available to analyze your specifications
+          and schedule your next on-site pours.
+        </p>
+      </>
+    ),
   },
 
-  {
-    title: "Steel Products",
-
-    icon: <FaHardHat />,
-
-    description:
-      "Premium-grade structural steel that provides superior load-bearing capacity, flexibility, and long-term reliability.",
-
-    types: [
-      "Structural Steel Sections",
-      "Steel Beams",
-      "Steel Columns",
-      "Steel Plates",
-      "Steel Channels & Angles",
-    ],
-
-    images: [steel1, steel2],
-  },
 
   {
-    title: "Reinforcement Materials",
-
-    icon: <FaShieldAlt />,
-
-    description:
-      "Engineered reinforcement products that enhance concrete strength, improve structural performance, and increase resistance to tension and cracking.",
-
-    types: [
-      "TMT Reinforcement Bars",
-      "Reinforcement Mesh",
-      "Binding Wire",
-      "Couplers",
-      "Rebar Accessories",
-    ],
-
-    images: [reinforcement1, reinforcement2],
-  },
-
-  {
-    title: "Structural Building Materials",
+    title: "Reinforcing Bars",
 
     icon: <FaLayerGroup />,
 
-    description:
-      "Essential construction materials that support the overall structural framework and ensure project quality from foundation to completion.",
+    image: reinforcingBars,
 
-    types: [
-      "Bricks & Blocks",
-      "Aggregates",
-      "Sand",
-      "Waterproofing Materials",
-      "Construction Chemicals",
-      "Formwork & Shuttering Materials",
-    ],
+    shortDescription:
+      "High-quality reinforcing bars designed to optimize mechanical adhesion with the cement matrix and enhance structural performance.",
 
-    images: [building1, building2],
+    content: (
+      <>
+        <p>
+          Reinforcing bars optimize mechanical adhesion with the cement
+          matrix. This prevents internal slipping under load, resulting in
+          steel bars with excellent characteristics that guarantee:
+        </p>
+
+        <ul>
+          <li>Consistent quality.</li>
+          <li>Consistent linear mass.</li>
+        </ul>
+
+        <h3>Available Grades</h3>
+
+        <ul>
+          <li>Weldable FeE500 reinforcing bar</li>
+          <li>Weldable FeE400 reinforcing bar</li>
+        </ul>
+
+        <h3>Available Dimensions</h3>
+
+        <ul>
+          <li>Diameters: 8 to 20 mm</li>
+          <li>Lengths: 12 m (+100, -00 mm)</li>
+        </ul>
+
+        <h3>Packaging</h3>
+
+        <ul>
+          <li>Bars packaged in bundles of 2 to 2.5 tons.</li>
+          <li>
+            Bundles are tied with 6 wire rope ties along their entire length.
+          </li>
+        </ul>
+
+        <h3>Applications</h3>
+
+        <p>
+          Ideal for reinforcing foundations, columns, beams, and cast-in-place
+          walls.
+        </p>
+      </>
+    ),
+  },
+
+
+  {
+    title: "Cement",
+
+    icon: <FaIndustry />,
+
+    image: cement,
+
+    shortDescription:
+      "Reliable cement solutions engineered for consistent strength development and durable mortar and concrete applications.",
+
+    content: (
+      <>
+        <p>
+          For your upcoming construction projects, we offer a complete range
+          of cements covering all regulatory strength classes, from
+          <strong> CPJ 35 to CPA 55</strong>, in accordance with the
+          <strong> NM 10.1.004</strong> standard.
+        </p>
+
+        <p>
+          These industrial formulations incorporate rigorous control of
+          milling fineness and chemical consistency to guarantee optimal
+          short- and long-term strength development for your mortars and
+          concrete.
+        </p>
+      </>
+    ),
+  },
+
+
+  {
+    title: "Concrete Blocks & Structural Hollow Core Slabs",
+
+    icon: <FaCubes />,
+
+    image: concreteBlocks,
+
+    shortDescription:
+      "Durable masonry and structural solutions designed to combine strength, lightness, and long-term performance.",
+
+    content: (
+      <>
+        <p>
+          Our concrete blocks and structural hollow core slabs are designed
+          to guarantee the durability of your masonry, the lightness of your
+          floors, and the longevity of your reinforced concrete structures.
+        </p>
+      </>
+    ),
+  },
+
+
+  {
+    title: "Aggregates",
+
+    icon: <FaCircle />,
+
+    image: aggregates,
+
+    shortDescription:
+      "Quality aggregates with controlled particle sizing to provide strength and reliable performance across construction applications.",
+
+    content: (
+      <>
+        <p>
+          Our range of aggregates is selected to provide the strength,
+          stability, and consistency required for demanding construction
+          applications. Carefully controlled particle sizing helps ensure
+          optimal grading, compaction, and performance in concrete and
+          structural works.
+        </p>
+      </>
+    ),
+  },
+
+
+  {
+    title: "Concrete Admixtures & Chemicals",
+
+    icon: <FaFlask />,
+
+    image: concreteAdmixtures,
+
+    shortDescription:
+      "Advanced concrete admixtures and chemicals designed to improve workability, strength, and long-term concrete durability.",
+
+    content: (
+      <>
+        <p>
+          For your upcoming construction projects, we offer a complete range
+          of concrete admixtures and chemicals covering all regulatory
+          technical functions, from plasticizers to high-strength
+          water-reducing superplasticizers.
+        </p>
+
+        <p>
+          These industrial formulations incorporate rigorous control of
+          rheological properties and hydration kinetics to guarantee improved
+          workability, increased mechanical strength, and enhanced durability
+          of your concrete.
+        </p>
+      </>
+    ),
   },
 ];
 
 
 /* =====================================================
-   STRUCTURAL WORK PAGE
+   CONCRETE SOLUTIONS PAGE
 ===================================================== */
 
-export default function StructuralWork() {
+export default function ConcreteSolutions() {
   return (
     <main
-      className="structural-work-page"
+      className="concrete-solutions-page"
       style={{
         backgroundImage: `url(${solutionsBg})`,
       }}
@@ -169,134 +279,77 @@ export default function StructuralWork() {
 
 
       {/* =================================================
-          STRUCTURAL WORK CONTENT
+          CONCRETE SOLUTIONS CONTENT
       ================================================= */}
 
-      <section className="structural-work-content">
+      <section className="concrete-solutions-content">
 
-        {structuralSections.map((section) => {
+        {concreteSolutions.map((solution) => (
 
-          /* =============================================
-             CARD CONTENT
-          ============================================= */
+          <article
+            className="concrete-solution-card"
+            key={solution.title}
+          >
 
-          const cardContent = (
-            <>
+            {/* =========================================
+                IMAGE
+            ========================================= */}
 
-              {/* =========================================
-                  IMAGES
-              ========================================= */}
+            <div className="concrete-solution-image">
 
-              <div className="structural-images">
+              <img
+                src={solution.image}
+                alt={solution.title}
+              />
 
-                <img
-                  src={section.images[0]}
-                  alt={section.title}
-                />
-
-                <img
-                  src={section.images[1]}
-                  alt={`${section.title} 2`}
-                />
-
-              </div>
+            </div>
 
 
-              {/* =========================================
-                  INFORMATION
-              ========================================= */}
+            {/* =========================================
+                INFORMATION
+            ========================================= */}
 
-              <div className="structural-info">
+            <div className="concrete-solution-info">
 
-                {/* =======================================
-                    TITLE
-                ======================================= */}
+              {/* TITLE */}
 
-                <div className="structural-title">
+              <div className="concrete-solution-title">
 
-                  <div className="structural-icon">
-                    {section.icon}
-                  </div>
+                <div className="concrete-solution-icon">
+                  {solution.icon}
+                </div>
 
-                  <div>
+                <div>
 
-                    <h2>
-                      {section.title}
-                    </h2>
+                  <h2>
+                    {solution.title}
+                  </h2>
 
-                    <div className="title-line"></div>
-
-                  </div>
+                  <div className="concrete-title-line"></div>
 
                 </div>
 
-
-                {/* =======================================
-                    DESCRIPTION
-                ======================================= */}
-
-                <p className="structural-description">
-                  {section.description}
-                </p>
-
-
-                {/* =======================================
-                    TYPES
-                ======================================= */}
-
-                <ul className="structural-list">
-
-                  {section.types.map((item) => (
-
-                    <li key={item}>
-                      {item}
-                    </li>
-
-                  ))}
-
-                </ul>
-
               </div>
 
-            </>
-          );
+
+              {/* SHORT DESCRIPTION */}
+
+              <p className="concrete-solution-description">
+                {solution.shortDescription}
+              </p>
 
 
-          /* =============================================
-             LINKED CARD
-             Concrete Solutions
-          ============================================= */
+              {/* DETAILED CONTENT */}
 
-          if (section.link) {
+              <div className="concrete-solution-details">
+                {solution.content}
+              </div>
 
-            return (
-              <Link
-                to={section.link}
-                className="structural-card structural-card-link"
-                key={section.title}
-              >
-                {cardContent}
-              </Link>
-            );
+            </div>
 
-          }
+          </article>
 
-
-          /* =============================================
-             NORMAL CARD
-             Other Structural Sections
-          ============================================= */
-
-          return (
-            <article
-              className="structural-card"
-              key={section.title}
-            >
-              {cardContent}
-            </article>
-          );
-
-        })}
+        ))}
 
       </section>
 
