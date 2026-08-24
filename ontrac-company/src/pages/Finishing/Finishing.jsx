@@ -3,124 +3,361 @@ import "./Finishing.css";
 
 import Header from "../../components/Header/Header";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 
-import coating1 from "../../assets/Finishing/coating1.jpg";
-import coating2 from "../../assets/Finishing/coating2.jpg";
-import decorative1 from "../../assets/Finishing/decoration1.jpg";
-import decorative2 from "../../assets/Finishing/decoration2.jpg";
-import finishing1 from "../../assets/Finishing/final1.jpg";
-import finishing2 from "../../assets/Finishing/final2.jpg";
+/* =====================================================
+   PRODUCT IMAGES
+   Update these paths/names to match your actual images.
+===================================================== */
+
+import paintings from "../../assets/Finishing/paintings.jpg";
+import protectiveCoatings from "../../assets/Finishing/protective_coatings.jpg";
+
+import customDoorsFurniture from "../../assets/Finishing/doors_furniture.jpg";
+import modularKitchens from "../../assets/Finishing/modular_kitchen.jpg";
+import cupboardsStorage from "../../assets/Finishing/cupboard.jpg";
 
 import {
   FaPaintRoller,
-  FaPalette,
-  FaHome,
+  FaShieldAlt,
+  FaDoorOpen,
+  FaUtensils,
+  FaBoxes,
 } from "react-icons/fa";
 
-
 /* =====================================================
-   FINISHING SECTIONS
+   FINISHING DETAILS DATA
 ===================================================== */
 
-const finishingSections = [
+const finishingSolutions = [
+  /* =====================================================
+     PAINTINGS
+  ===================================================== */
+
   {
-    title: "Coatings",
+    id: "paintings",
+
+    category: "Coatings",
+
+    title: "Paintings",
 
     icon: <FaPaintRoller />,
 
-    description:
-      "High-quality coating solutions designed to protect surfaces, improve durability, and provide attractive finishes for interior and exterior applications.",
+    image: paintings,
 
-    types: [
-      "Interior Paint Coatings",
-      "Exterior Paint Coatings",
-      "Protective Coatings",
-      "Anti-Microbial Coatings",
-      "Weather-Resistant Coatings",
-      "Floor Coatings",
-    ],
+    shortDescription:
+      "A complete range of interior and exterior paints designed for residential, commercial, and professional projects.",
 
-    images: [coating1, coating2],
+    content: (
+      <>
+        <h3>Paintings</h3>
+
+        <p>
+          A complete range of interior and exterior paints,
+          designed for residential, commercial and professional
+          projects.
+        </p>
+
+        <h4>Key Benefits</h4>
+
+        <ul>
+          <li>
+            Quality, excellent coverage, resistance and
+            durability.
+          </li>
+
+          <li>
+            Wide selection of colours and finishes.
+          </li>
+
+          <li>
+            Ideal for walls, ceilings, facades and renovation
+            projects.
+          </li>
+        </ul>
+      </>
+    ),
   },
 
+  /* =====================================================
+     PROTECTIVE COATINGS
+  ===================================================== */
+
   {
-    title: "Decorative Finishes",
+    id: "protective-coatings",
 
-    icon: <FaPalette />,
+    category: "Coatings",
 
-    description:
-      "Creative finishing solutions that enhance the visual appeal and character of spaces through unique textures, colors, and design elements.",
+    title: "Protective Coatings",
 
-    types: [
-      "Texture Finishes",
-      "Decorative Paints",
-      "Wall Effects",
-      "Stone & Wood Finishes",
-      "Designer Coatings",
-      "Feature Wall Finishes",
-    ],
+    icon: <FaShieldAlt />,
 
-    images: [decorative1, decorative2],
+    image: protectiveCoatings,
+
+    shortDescription:
+      "High-density fiber cement facade panels combining mineral strength with high-tech surface treatment for long-lasting exterior protection.",
+
+    content: (
+      <>
+        <h3>Protective Coatings</h3>
+
+        <p>
+          High-density fiber cement facade panels combining
+          mineral strength and high-tech surface treatment.
+        </p>
+
+        <h4>Key Benefits</h4>
+
+        <ul>
+          <li>Integrated anti-graffiti barrier.</li>
+
+          <li>Advanced antimicrobial coating.</li>
+
+          <li>
+            Extreme resistance to weathering and UV rays.
+          </li>
+        </ul>
+      </>
+    ),
   },
 
+  /* =====================================================
+     CUSTOM DOORS & FURNITURE
+  ===================================================== */
+
   {
-    title: "Final Details",
+    id: "custom-doors-furniture",
 
-    icon: <FaHome />,
+    category: "Final Details",
 
-    description:
-      "Complete interior solutions that add functionality, comfort, and style while delivering a refined finished environment.",
+    title: "Custom Doors & Furniture",
 
-    types: [
-      "Doors & Frames",
-      "Modular Kitchens",
-      "Custom Furniture",
-      "Wooden Partitions",
-      "Cupboards & Storage Solutions",
-      "Dressing Rooms & Interior Furnishings",
-    ],
+    icon: <FaDoorOpen />,
 
-    images: [finishing1, finishing2],
+    image: customDoorsFurniture,
+
+    shortDescription:
+      "Custom-made doors and furniture designed to combine aesthetics, functionality, and quality while creating unique spaces tailored to your needs.",
+
+    content: (
+      <>
+        <h3>Custom Doors &amp; Furniture</h3>
+
+        <p>
+          Give your spaces character with our custom-made doors
+          and furniture solutions, designed to combine
+          aesthetics, functionality, and quality.
+        </p>
+
+        <p>
+          Each project is tailored to your needs, dimensions,
+          and style to create unique layouts that seamlessly
+          integrate into your interior.
+        </p>
+
+        <p>
+          From elegant doors to TV units, storage, dressing
+          rooms and custom layouts, we support you in designing
+          harmonious, modern and sustainable spaces.
+        </p>
+
+        <h4>Ideal For</h4>
+
+        <ul>
+          <li>Living rooms.</li>
+
+          <li>Bedrooms.</li>
+
+          <li>Dressing rooms.</li>
+
+          <li>Offices.</li>
+
+          <li>Entrances.</li>
+
+          <li>Professional spaces.</li>
+
+          <li>Custom design projects.</li>
+        </ul>
+      </>
+    ),
+  },
+
+  /* =====================================================
+     MODULAR KITCHENS
+  ===================================================== */
+
+  {
+    id: "modular-kitchens",
+
+    category: "Final Details",
+
+    title: "Modular Kitchens",
+
+    icon: <FaUtensils />,
+
+    image: modularKitchens,
+
+    shortDescription:
+      "Functional, elegant, and customizable modular kitchens designed to optimize space, storage, comfort, and overall interior harmony.",
+
+    content: (
+      <>
+        <h3>Modular Kitchens</h3>
+
+        <p>
+          Designed to combine functionality, elegance, and space
+          optimization, our modular kitchens adapt to all
+          styles and layouts.
+        </p>
+
+        <p>
+          Thanks to a practical and customizable design, each
+          element is designed to offer optimal storage,
+          comfortable use, and a harmonious finish.
+        </p>
+
+        <h4>Ideal For</h4>
+
+        <ul>
+          <li>Apartments.</li>
+
+          <li>Houses.</li>
+
+          <li>Villas.</li>
+
+          <li>Offices.</li>
+
+          <li>Residences.</li>
+
+          <li>Development projects.</li>
+        </ul>
+      </>
+    ),
+  },
+
+  /* =====================================================
+     CUPBOARDS & STORAGE
+  ===================================================== */
+
+  {
+    id: "cupboards-storage",
+
+    category: "Final Details",
+
+    title: "Cupboards & Storage",
+
+    icon: <FaBoxes />,
+
+    image: cupboardsStorage,
+
+    shortDescription:
+      "Modular wardrobes and storage solutions designed to maximize available space while complementing different interior styles and layouts.",
+
+    content: (
+      <>
+        <h3>Cupboards &amp; Storage</h3>
+
+        <p>
+          Enhance your interior with our collection of modular
+          wardrobes, designed to adapt to all your style and
+          space requirements.
+        </p>
+
+        <p>
+          To optimize every square meter, choose from practical
+          wardrobe configurations designed to combine elegant
+          design, generous storage, and everyday convenience.
+        </p>
+
+        <h4>Linear Wardrobe — I-Shaped</h4>
+
+        <p>
+          An elegant, elongated solution that subtly adorns your
+          walls without obstructing passage. Ideal for minimalist
+          bedrooms or entryways.
+        </p>
+
+        <h4>L-Shaped Corner Wardrobe</h4>
+
+        <p>
+          A clever layout spanning two walls that maximizes
+          unused corner space while harmoniously combining
+          spacious hanging rails and drawer units.
+        </p>
+
+        <h4>U-Shaped Wardrobe</h4>
+
+        <p>
+          A majestic configuration extending across three walls,
+          creating a truly bespoke storage space and transforming
+          the room into a luxurious, organized dressing area.
+        </p>
+      </>
+    ),
   },
 ];
 
-
 /* =====================================================
-   COMPONENT
+   FINISHING DETAILS PAGE
 ===================================================== */
 
-export default function FinalDetails() {
+export default function FinishingDetails() {
+  const location = useLocation();
+
+  /* =====================================================
+     HASH NAVIGATION
+  ===================================================== */
+
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const elementId = location.hash.substring(1);
+
+    const timer = setTimeout(() => {
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [location.hash]);
+
   return (
     <main
-      className="structural-work-page"
+      className="concrete-solutions-page"
       style={{
         backgroundImage: `url(${solutionsBg})`,
       }}
     >
-
       {/* =================================================
           COMMON HEADER
       ================================================= */}
 
-      <Header activePage="solutions" />
-
+      <Header />
 
       {/* =================================================
           HERO
       ================================================= */}
 
       <section className="structural-work-hero">
-
         <div className="structural-work-hero-copy">
-
           <h1>
             <span className="finishing-black">
               Finishing
             </span>
 
             <span className="finishing-blue">
-              Details
+              &nbsp;Details
             </span>
           </h1>
 
@@ -128,102 +365,131 @@ export default function FinalDetails() {
             Our finishing solutions bring together functionality,
             aesthetics, and quality to transform structures into
             complete living and working spaces. From protective
-            coatings and decorative finishes to customized interior
-            elements, we provide solutions that enhance appearance,
-            comfort, and long-term performance.
+            coatings and decorative finishes to customized
+            interior elements, we provide solutions that enhance
+            appearance, comfort, and long-term performance.
           </p>
-
         </div>
-
       </section>
 
-
       {/* =================================================
-          FINISHING CONTENT
+          CATEGORY INTRODUCTION
       ================================================= */}
 
-      <section className="structural-work-content">
+      <section className="protection-category-intro">
+        {/* ===============================================
+            COATINGS
+        =============================================== */}
 
-        {finishingSections.map((section) => (
+        <div className="protection-category-block">
+          <div className="protection-category-icon">
+            <FaPaintRoller />
+          </div>
 
+          <div>
+            <h2>COATINGS</h2>
+
+            <p>
+              High-quality decorative and protective coating
+              solutions designed to improve appearance,
+              durability, weather resistance, and long-term
+              surface performance.
+            </p>
+          </div>
+        </div>
+
+        {/* ===============================================
+            FINAL DETAILS
+        =============================================== */}
+
+        <div className="protection-category-block">
+          <div className="protection-category-icon">
+            <FaDoorOpen />
+          </div>
+
+          <div>
+            <h2>FINAL DETAILS</h2>
+
+            <p>
+              Customized interior solutions including doors,
+              furniture, modular kitchens, cupboards, and
+              storage systems designed to combine aesthetics,
+              functionality, and efficient use of space.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================
+          PRODUCT / SOLUTION CARDS
+      ================================================= */}
+
+      <section className="concrete-solutions-content">
+        {finishingSolutions.map((solution) => (
           <article
-            className="structural-card"
-            key={section.title}
+            className="concrete-solution-card"
+            key={solution.id}
+            id={solution.id}
           >
+            {/* =========================================
+                PRODUCT IMAGE
+            ========================================= */}
 
-            {/* =========================
-                TWO IMAGES
-            ========================= */}
-
-            <div className="structural-images">
-
+            <div className="concrete-solution-image">
               <img
-                src={section.images[0]}
-                alt={`${section.title} 1`}
+                src={solution.image}
+                alt={solution.title}
               />
-
-              <img
-                src={section.images[1]}
-                alt={`${section.title} 2`}
-              />
-
             </div>
 
+            {/* =========================================
+                PRODUCT INFORMATION
+            ========================================= */}
 
-            {/* =========================
-                INFORMATION
-            ========================= */}
+            <div className="concrete-solution-info">
+              {/* =====================================
+                  CATEGORY
+              ===================================== */}
 
-            <div className="structural-info">
+              <span className="protection-product-category">
+                {solution.category}
+              </span>
 
-              <div className="structural-title">
+              {/* =====================================
+                  TITLE
+              ===================================== */}
 
-                <div className="structural-icon">
-                  {section.icon}
+              <div className="concrete-solution-title">
+                <div className="concrete-solution-icon">
+                  {solution.icon}
                 </div>
 
                 <div>
+                  <h2>{solution.title}</h2>
 
-                  <h2>
-                    {section.title}
-                  </h2>
-
-                  <div className="title-line"></div>
-
+                  <div className="concrete-title-line"></div>
                 </div>
-
               </div>
 
+              {/* =====================================
+                  SHORT DESCRIPTION
+              ===================================== */}
 
-              {/* DESCRIPTION */}
-
-              <p className="structural-description">
-                {section.description}
+              <p className="concrete-solution-description">
+                {solution.shortDescription}
               </p>
 
+              {/* =====================================
+                  DETAILED CONTENT
+              ===================================== */}
 
-              {/* TYPES */}
-
-              <ul className="structural-list">
-
-                {section.types.map((item) => (
-
-                  <li key={item}>
-                    {item}
-                  </li>
-
-                ))}
-
-              </ul>
-
+              <div className="concrete-solution-details">
+                {solution.content}
+              </div>
             </div>
-
           </article>
-
         ))}
-
       </section>
-
     </main>
   );
 }

@@ -1,76 +1,982 @@
 /* =====================================================
-   FINISHING DETAILS — HERO HEADING FIX
+   FINISHING DETAILS PAGE
+   ===================================================== */
+
+.concrete-solutions-page {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #0b1120;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.structural-work-hero {
+  padding: 4rem 2rem 2.5rem;
+}
+
+.structural-work-hero-copy {
+  max-width: 900px;
+}
+
+
+/* =====================================================
+   HERO HEADING
    ===================================================== */
 
 .structural-work-hero-copy h1 {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+
   margin: 0;
+
   font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: 0.95;
+
   font-weight: 900;
+
   text-transform: uppercase;
-}
-
-/* "FINISHING" — BLACK */
-.structural-work-hero-copy h1 .finishing-black {
-  position: relative;
-  color: #0b1120 !important;
-  display: inline-block;
-}
-
-/* Blue underline below FINISHING */
-.structural-work-hero-copy h1 .finishing-black::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -14px;
-  width: 2ch;
-  height: 5px;
-  background: #0d4bcc !important;
-  border-radius: 999px;
-}
-
-/* "DETAILS" — BLUE */
-.structural-work-hero-copy h1 .finishing-blue {
-  color: #0d4bcc !important;
-  display: inline-block;
-}
-
-/* Hero paragraph */
-.structural-work-hero-copy p {
-  margin: 2rem 0 0;
-  max-width: 720px;
-  color: #111827;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  font-weight: 600;
 }
 
 
 /* =====================================================
-   RESPONSIVE
+   FINISHING
+   ===================================================== */
+
+.finishing-black {
+  position: relative;
+
+  color: #0b1120;
+}
+
+
+/*
+   Blue underline
+*/
+
+.finishing-black::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -14px;
+
+  width: 1em;
+  height: 5px;
+
+  background: #0d4bcc;
+
+  border-radius: 999px;
+}
+
+
+/* =====================================================
+   DETAILS
+   ===================================================== */
+
+.finishing-blue {
+  color: #0d4bcc;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+   ===================================================== */
+
+.structural-work-hero-copy p {
+  margin: 2.2rem 0 0;
+
+  max-width: 850px;
+
+  color: #111827;
+
+  /*
+     Same general size as the reference paragraph
+  */
+
+  font-size: 1.15rem;
+
+  line-height: 1.9;
+
+  /*
+     Regular text — NOT bold
+  */
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   CATEGORY INTRODUCTION
+   ===================================================== */
+
+.protection-category-intro {
+  width: 100%;
+
+  max-width: 1750px;
+
+  margin: 0 auto;
+
+  padding: 2rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+
+/* =====================================================
+   CATEGORY CARD
+   ===================================================== */
+
+.protection-category-block {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 1.5rem;
+
+  padding: 2rem;
+
+  background: rgba(235, 244, 255, 0.95);
+
+  border: 1px solid rgba(13, 75, 204, 0.12);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 55px rgba(15, 23, 42, 0.10);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.protection-category-block:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 30px 75px rgba(15, 23, 42, 0.15);
+}
+
+
+/* =====================================================
+   CATEGORY ICON
+   ===================================================== */
+
+.protection-category-icon {
+  width: 70px;
+
+  height: 70px;
+
+  min-width: 70px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d4bcc,
+      #1d4ed8
+    );
+
+  color: #ffffff;
+
+  font-size: 1.6rem;
+}
+
+
+/* =====================================================
+   CATEGORY HEADING
+   ===================================================== */
+
+.protection-category-block h2 {
+  margin: 0 0 0.7rem;
+
+  color: #0b1120;
+
+  font-size: 1.35rem;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CATEGORY DESCRIPTION
+   ===================================================== */
+
+.protection-category-block p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 1.05rem;
+
+  line-height: 1.75;
+
+  /*
+     Regular weight
+  */
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   PRODUCT CONTENT
+   ===================================================== */
+
+.concrete-solutions-content {
+  width: 100%;
+
+  max-width: 1750px;
+
+  margin: 0 auto;
+
+  padding: 2rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3.2rem;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+   ===================================================== */
+
+.concrete-solution-card {
+  display: grid;
+
+  grid-template-columns: 520px 1fr;
+
+  align-items: stretch;
+
+  gap: 3rem;
+
+  padding: 2.8rem;
+
+  background: rgba(235, 244, 255, 0.95);
+
+  border: 1px solid rgba(13, 75, 204, 0.12);
+
+  border-radius: 32px;
+
+  box-shadow:
+    0 24px 70px rgba(15, 23, 42, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.concrete-solution-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 40px 100px rgba(15, 23, 42, 0.18);
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+   ===================================================== */
+
+.concrete-solution-image {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 440px;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+.concrete-solution-image img {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 440px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.concrete-solution-card:hover
+.concrete-solution-image img {
+  transform: scale(1.04);
+}
+
+
+/* =====================================================
+   PRODUCT INFORMATION
+   ===================================================== */
+
+.concrete-solution-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+
+/* =====================================================
+   CATEGORY LABEL
+   ===================================================== */
+
+.protection-product-category {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-bottom: 1rem;
+
+  padding: 0.35rem 0.8rem;
+
+  color: #0d4bcc;
+
+  background: rgba(13, 75, 204, 0.08);
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PRODUCT TITLE
+   ===================================================== */
+
+.concrete-solution-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.2rem;
+}
+
+
+/* =====================================================
+   PRODUCT ICON
+   ===================================================== */
+
+.concrete-solution-icon {
+  width: 78px;
+
+  height: 78px;
+
+  min-width: 78px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0d4bcc,
+      #1d4ed8
+    );
+
+  color: #ffffff;
+
+  font-size: 1.9rem;
+}
+
+
+/* =====================================================
+   PRODUCT HEADING
+   ===================================================== */
+
+.concrete-solution-title h2 {
+  margin: 0;
+
+  color: #0b1120;
+
+  font-size: 1.85rem;
+
+  line-height: 1.25;
+
+  font-weight: 900;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TITLE LINE
+   ===================================================== */
+
+.concrete-title-line {
+  width: 80px;
+
+  height: 4px;
+
+  margin-top: 0.8rem;
+
+  background: #0d4bcc;
+
+  border-radius: 999px;
+}
+
+
+/* =====================================================
+   SHORT DESCRIPTION
+   ===================================================== */
+
+.concrete-solution-description {
+  margin: 1.6rem 0 1.4rem;
+
+  color: #475569;
+
+  font-size: 1.15rem;
+
+  line-height: 1.9;
+
+  /*
+     Regular — not bold
+  */
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   DETAILED CONTENT
+   ===================================================== */
+
+.concrete-solution-details {
+  color: #374151;
+
+  font-size: 1.05rem;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   PARAGRAPHS
+   ===================================================== */
+
+.concrete-solution-details p {
+  margin: 0 0 1.35rem;
+}
+
+.concrete-solution-details p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   STRONG TEXT
+   ===================================================== */
+
+.concrete-solution-details strong {
+  color: #0b1120;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   DETAIL LIST
+   ===================================================== */
+
+.concrete-solution-details ul {
+  margin: 0.7rem 0 1.4rem;
+
+  padding: 0;
+
+  list-style: none;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 0.9rem 2.2rem;
+}
+
+
+/* =====================================================
+   LIST ITEM
+   ===================================================== */
+
+.concrete-solution-details li {
+  position: relative;
+
+  padding-left: 1.5rem;
+
+  color: #1f2937;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   BLUE BULLET
+   ===================================================== */
+
+.concrete-solution-details li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0.65rem;
+
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #0d4bcc;
+}
+
+
+/* =====================================================
+   DETAIL SUBHEADINGS
+   ===================================================== */
+
+.concrete-solution-details h3 {
+  margin: 1.5rem 0 0.65rem;
+
+  color: #0b1120;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   H4
+   ===================================================== */
+
+.concrete-solution-details h4 {
+  margin: 1.3rem 0 0.5rem;
+
+  color: #0b1120;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   FIRST SUBHEADING
+   ===================================================== */
+
+.concrete-solution-details h3:first-child {
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   MEDIUM DESKTOP
+   ===================================================== */
+
+@media (max-width: 1400px) {
+
+  .concrete-solution-card {
+    grid-template-columns: 430px 1fr;
+
+    gap: 2.5rem;
+
+    padding: 2.5rem;
+  }
+
+  .concrete-solution-image {
+    min-height: 410px;
+  }
+
+  .concrete-solution-image img {
+    min-height: 410px;
+  }
+
+  .concrete-solution-title h2 {
+    font-size: 1.7rem;
+  }
+}
+
+
+/* =====================================================
+   SMALLER DESKTOP
+   ===================================================== */
+
+@media (max-width: 1200px) {
+
+  .protection-category-intro {
+    padding: 2rem;
+  }
+
+  .concrete-solutions-content {
+    padding: 2rem;
+  }
+
+  .concrete-solution-card {
+    grid-template-columns: 360px 1fr;
+
+    gap: 2rem;
+
+    padding: 2.2rem;
+  }
+
+  .concrete-solution-image {
+    min-height: 370px;
+  }
+
+  .concrete-solution-image img {
+    min-height: 370px;
+  }
+
+  .concrete-solution-title h2 {
+    font-size: 1.55rem;
+  }
+
+  .concrete-solution-description {
+    font-size: 1.08rem;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 992px) {
+
+  .structural-work-hero {
+    padding: 3rem 2rem 1.5rem;
+  }
+
+  .structural-work-hero-copy {
+    max-width: 100%;
+  }
+
+  .protection-category-intro {
+    grid-template-columns: 1fr;
+
+    padding: 2rem;
+  }
+
+  .concrete-solutions-content {
+    padding: 2rem;
+  }
+
+  .concrete-solution-card {
+    grid-template-columns: 1fr;
+
+    gap: 2.2rem;
+  }
+
+  .concrete-solution-image {
+    height: 360px;
+
+    min-height: 360px;
+  }
+
+  .concrete-solution-image img {
+    min-height: 360px;
+  }
+
+  .concrete-solution-info {
+    padding: 0;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
    ===================================================== */
 
 @media (max-width: 768px) {
 
-  .structural-work-hero-copy h1 {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  .structural-work-hero {
+    padding: 2.5rem 1.5rem;
   }
 
+  .structural-work-hero-copy h1 {
+    font-size:
+      clamp(2.6rem, 8vw, 3.7rem);
+  }
+
+  .structural-work-hero-copy p {
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+  }
+
+  .protection-category-intro {
+    padding: 1.5rem;
+
+    gap: 1.5rem;
+  }
+
+  .protection-category-block {
+    padding: 1.5rem;
+
+    gap: 1.2rem;
+  }
+
+  .protection-category-icon {
+    width: 60px;
+
+    height: 60px;
+
+    min-width: 60px;
+
+    font-size: 1.4rem;
+  }
+
+  .protection-category-block h2 {
+    font-size: 1.15rem;
+  }
+
+  .protection-category-block p {
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .concrete-solutions-content {
+    padding: 1.5rem;
+  }
+
+  .concrete-solution-card {
+    padding: 1.7rem;
+
+    border-radius: 26px;
+
+    gap: 1.7rem;
+  }
+
+  .concrete-solution-image {
+    height: 280px;
+
+    min-height: 280px;
+
+    border-radius: 20px;
+  }
+
+  .concrete-solution-image img {
+    min-height: 280px;
+  }
+
+  .concrete-solution-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .concrete-solution-description {
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+  }
+
+  .concrete-solution-details {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .concrete-solution-details ul {
+    grid-template-columns: 1fr;
+  }
 }
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
 
 @media (max-width: 576px) {
 
+  .structural-work-hero {
+    padding: 2rem 1rem;
+  }
+
   .structural-work-hero-copy h1 {
     flex-wrap: wrap;
-    font-size: 2.3rem;
+
+    font-size: 2.4rem;
   }
 
-  .structural-work-hero-copy h1 .finishing-black::after {
-    bottom: -10px;
-    height: 4px;
+  .structural-work-hero-copy p {
+    margin-top: 1.8rem;
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+
+    font-weight: 400;
   }
 
+  .protection-category-intro {
+    padding: 1rem;
+  }
+
+  .protection-category-block {
+    padding: 1.25rem;
+
+    border-radius: 22px;
+  }
+
+  .protection-category-icon {
+    width: 55px;
+
+    height: 55px;
+
+    min-width: 55px;
+
+    border-radius: 16px;
+
+    font-size: 1.25rem;
+  }
+
+  .protection-category-block h2 {
+    font-size: 1rem;
+  }
+
+  .protection-category-block p {
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+
+    font-weight: 400;
+  }
+
+  .concrete-solutions-content {
+    padding: 1rem;
+  }
+
+  .concrete-solution-card {
+    padding: 1.35rem;
+
+    border-radius: 22px;
+  }
+
+  .concrete-solution-image {
+    height: 220px;
+
+    min-height: 220px;
+
+    border-radius: 18px;
+  }
+
+  .concrete-solution-image img {
+    min-height: 220px;
+  }
+
+  .concrete-solution-title {
+    align-items: flex-start;
+
+    gap: 0.9rem;
+  }
+
+  .concrete-solution-icon {
+    width: 62px;
+
+    height: 62px;
+
+    min-width: 62px;
+
+    border-radius: 18px;
+
+    font-size: 1.45rem;
+  }
+
+  .concrete-solution-title h2 {
+    font-size: 1.2rem;
+
+    line-height: 1.35;
+  }
+
+  .concrete-solution-description {
+    font-size: 1rem;
+
+    line-height: 1.75;
+
+    font-weight: 400;
+  }
+
+  .concrete-solution-details {
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+
+    font-weight: 400;
+  }
+
+  .concrete-solution-details li {
+    font-size: 0.98rem;
+
+    font-weight: 400;
+  }
+
+  .concrete-solution-details h3,
+  .concrete-solution-details h4 {
+    font-size: 0.9rem;
+  }
 }

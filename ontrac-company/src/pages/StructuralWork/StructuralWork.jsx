@@ -1,3 +1,4 @@
+
 import "../Home/Home.css";
 import "./StructuralWork.css";
 
@@ -11,6 +12,9 @@ import cement from "../../assets/Concrete_Solutions/cement.jpg";
 import concreteBlocks from "../../assets/Concrete_Solutions/concrete_blocks.jpg";
 import aggregates from "../../assets/Concrete_Solutions/aggregates.jpg";
 import concreteAdmixtures from "../../assets/Concrete_Solutions/admixtures.jpg";
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import {
   FaCube,
@@ -28,6 +32,8 @@ import {
 
 const concreteSolutions = [
   {
+    id: "ready-mix-concrete",
+
     title: "Ready-Mix Concrete",
 
     icon: <FaCube />,
@@ -59,8 +65,9 @@ const concreteSolutions = [
     ),
   },
 
-
   {
+    id: "reinforcing-bars",
+
     title: "Reinforcing Bars",
 
     icon: <FaLayerGroup />,
@@ -101,6 +108,7 @@ const concreteSolutions = [
 
         <ul>
           <li>Bars packaged in bundles of 2 to 2.5 tons.</li>
+
           <li>
             Bundles are tied with 6 wire rope ties along their entire length.
           </li>
@@ -116,8 +124,9 @@ const concreteSolutions = [
     ),
   },
 
-
   {
+    id: "cement",
+
     title: "Cement",
 
     icon: <FaIndustry />,
@@ -146,8 +155,9 @@ const concreteSolutions = [
     ),
   },
 
-
   {
+    id: "concrete-blocks",
+
     title: "Concrete Blocks & Structural Hollow Core Slabs",
 
     icon: <FaCubes />,
@@ -168,8 +178,9 @@ const concreteSolutions = [
     ),
   },
 
-
   {
+    id: "aggregates",
+
     title: "Aggregates",
 
     icon: <FaCircle />,
@@ -192,8 +203,9 @@ const concreteSolutions = [
     ),
   },
 
-
   {
+    id: "concrete-admixtures",
+
     title: "Concrete Admixtures & Chemicals",
 
     icon: <FaFlask />,
@@ -225,10 +237,47 @@ const concreteSolutions = [
 
 
 /* =====================================================
-   CONCRETE SOLUTIONS PAGE
+   STRUCTURAL WORK PAGE
 ===================================================== */
 
-export default function ConcreteSolutions() {
+export default function StructuralWork() {
+
+  const location = useLocation();
+
+
+  /* =====================================================
+     HANDLE HASH NAVIGATION
+  ===================================================== */
+
+  useEffect(() => {
+
+    if (!location.hash) {
+      return;
+    }
+
+    const elementId = location.hash.substring(1);
+
+    // Small delay ensures all cards have rendered
+    const timer = setTimeout(() => {
+
+      const element = document.getElementById(elementId);
+
+      if (element) {
+
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+      }
+
+    }, 100);
+
+    return () => clearTimeout(timer);
+
+  }, [location.hash]);
+
+
   return (
     <main
       className="concrete-solutions-page"
@@ -287,8 +336,9 @@ export default function ConcreteSolutions() {
         {concreteSolutions.map((solution) => (
 
           <article
+            key={solution.id}
+            id={solution.id}
             className="concrete-solution-card"
-            key={solution.title}
           >
 
             {/* =========================================
@@ -311,7 +361,9 @@ export default function ConcreteSolutions() {
 
             <div className="concrete-solution-info">
 
-              {/* TITLE */}
+              {/* =====================================
+                  TITLE
+              ===================================== */}
 
               <div className="concrete-solution-title">
 
@@ -332,14 +384,18 @@ export default function ConcreteSolutions() {
               </div>
 
 
-              {/* SHORT DESCRIPTION */}
+              {/* =====================================
+                  SHORT DESCRIPTION
+              ===================================== */}
 
               <p className="concrete-solution-description">
                 {solution.shortDescription}
               </p>
 
 
-              {/* DETAILED CONTENT */}
+              {/* =====================================
+                  DETAILED CONTENT
+              ===================================== */}
 
               <div className="concrete-solution-details">
                 {solution.content}
@@ -356,3 +412,4 @@ export default function ConcreteSolutions() {
     </main>
   );
 }
+

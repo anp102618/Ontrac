@@ -1,24 +1,28 @@
 /* =====================================================
-   Walls & Surfaces Page
+   Surface Solutions Page
    ===================================================== */
+
+.surface-solutions-page {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #0b1120;
+}
+
 
 /* =====================================================
-   Header
+   Hero
    ===================================================== */
 
-@import "../../components/Header/Header.css";
-
-
-/* =====================================================
-   Walls & Surfaces Hero
-   ===================================================== */
-
-.structural-work-hero {
+.surface-hero {
   padding: 4rem 2rem 2rem;
 }
 
-.structural-work-hero-copy {
-  max-width: 760px;
+.surface-hero-copy {
+  max-width: 800px;
 }
 
 
@@ -26,14 +30,14 @@
    Hero Heading
    ===================================================== */
 
-.structural-work-hero-copy h1 {
+.surface-hero-copy h1 {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 
   margin: 0;
 
-  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-size: clamp(3.2rem, 5.2vw, 4.8rem);
   line-height: 0.95;
 
   font-weight: 900;
@@ -42,21 +46,22 @@
 
 
 /* =====================================================
-   Walls
+   Surface
    ===================================================== */
 
-.walls-black {
+.surface-black {
   position: relative;
+
   color: #0b1120;
 }
 
 
 /*
-   Blue underline under the
-   first THREE letters: "WAL"
+   Blue underline under the beginning
+   of the word "SURFACE"
 */
 
-.walls-black::after {
+.surface-black::after {
   content: "";
 
   position: absolute;
@@ -64,7 +69,7 @@
   left: 0;
   bottom: -14px;
 
-  width: 1.0em;
+  width: 1em;
   height: 5px;
 
   background: #0d4bcc;
@@ -74,10 +79,10 @@
 
 
 /* =====================================================
-   Surfaces
+   Solutions
    ===================================================== */
 
-.walls-blue {
+.surface-blue {
   color: #0d4bcc;
 }
 
@@ -86,16 +91,16 @@
    Hero Description
    ===================================================== */
 
-.structural-work-hero-copy p {
-  margin: 2rem 0 0;
+.surface-hero-copy p {
+  margin: 2.2rem 0 0;
 
-  max-width: 720px;
+  max-width: 700px;
 
   color: #111827;
 
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 
-  line-height: 1.8;
+  line-height: 1.9;
 
   font-weight: 600;
 }
@@ -105,7 +110,7 @@
    Content
    ===================================================== */
 
-.structural-work-content {
+.surface-solutions-content {
   width: 100%;
 
   max-width: 1750px;
@@ -115,27 +120,26 @@
   padding: 2rem;
 
   display: flex;
-
   flex-direction: column;
 
-  gap: 3rem;
+  gap: 3.2rem;
 }
 
 
 /* =====================================================
-   Card
+   Surface Solution Card
    ===================================================== */
 
-.structural-card {
+.surface-solution-card {
   display: grid;
 
-  grid-template-columns: 330px 330px 1fr;
+  grid-template-columns: 520px 1fr;
 
-  align-items: center;
+  align-items: stretch;
 
-  gap: 2rem;
+  gap: 3rem;
 
-  padding: 2.5rem;
+  padding: 2.8rem;
 
   background: rgba(235, 244, 255, 0.95);
 
@@ -143,114 +147,137 @@
 
   border-radius: 32px;
 
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  box-shadow:
+    0 24px 70px rgba(15, 23, 42, 0.12);
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.structural-card:hover {
+
+.surface-solution-card:hover {
   transform: translateY(-8px);
 
-  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.18);
+  box-shadow:
+    0 40px 100px rgba(15, 23, 42, 0.18);
 }
 
 
 /* =====================================================
-   Images
+   Image Container
    ===================================================== */
 
-.structural-images {
-  display: contents;
+.surface-solution-image {
+  width: 100%;
+  height: 100%;
+
+  min-height: 440px;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.15);
 }
 
-.structural-images img {
-  width: 100%;
 
-  height: 300px;
+/* =====================================================
+   Image
+   ===================================================== */
+
+.surface-solution-image img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 440px;
 
   object-fit: cover;
 
-  border-radius: 24px;
+  display: block;
 
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
-
-  transition: transform 0.25s ease;
+  transition:
+    transform 0.35s ease;
 }
 
-.structural-card:hover .structural-images img {
-  transform: scale(1.03);
+
+.surface-solution-card:hover
+.surface-solution-image img {
+  transform: scale(1.04);
 }
 
 
 /* =====================================================
-   Right Side
+   Information
    ===================================================== */
 
-.structural-info {
+.surface-solution-info {
   display: flex;
 
   flex-direction: column;
 
   justify-content: center;
+
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 
 
 /* =====================================================
-   Section Title
+   Product Title
    ===================================================== */
 
-.structural-title {
+.surface-solution-title {
   display: flex;
 
   align-items: center;
 
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 
 /* =====================================================
-   Section Icon
+   Icon
    ===================================================== */
 
-.structural-icon {
-  width: 72px;
-
-  height: 72px;
+.surface-solution-icon {
+  width: 78px;
+  height: 78px;
 
   display: grid;
-
   place-items: center;
+
+  flex-shrink: 0;
 
   border-radius: 22px;
 
-  background: linear-gradient(
-    135deg,
-    #0d4bcc,
-    #1d4ed8
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #0d4bcc,
+      #1d4ed8
+    );
 
   color: #ffffff;
 
-  font-size: 1.7rem;
-
-  flex-shrink: 0;
+  font-size: 1.9rem;
 }
 
 
 /* =====================================================
-   Section Heading
+   Product Heading
    ===================================================== */
 
-.structural-title h2 {
+.surface-solution-title h2 {
   margin: 0;
 
-  font-size: 1.65rem;
+  font-size: 1.85rem;
 
   font-weight: 900;
 
   letter-spacing: 0.05em;
+
+  line-height: 1.25;
 
   text-transform: uppercase;
 
@@ -262,12 +289,12 @@
    Title Line
    ===================================================== */
 
-.title-line {
-  width: 70px;
+.surface-title-line {
+  width: 80px;
 
   height: 4px;
 
-  margin-top: 0.7rem;
+  margin-top: 0.8rem;
 
   background: #0d4bcc;
 
@@ -276,15 +303,30 @@
 
 
 /* =====================================================
-   Description
+   Short Description
    ===================================================== */
 
-.structural-description {
-  margin: 1.4rem 0 1.6rem;
+.surface-solution-description {
+  margin: 1.6rem 0 1.4rem;
 
   color: #475569;
 
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+
+  line-height: 1.9;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   Detailed Content
+   ===================================================== */
+
+.surface-solution-details {
+  color: #374151;
+
+  font-size: 1.08rem;
 
   line-height: 1.9;
 
@@ -293,11 +335,36 @@
 
 
 /* =====================================================
-   Product List
+   Paragraphs
    ===================================================== */
 
-.structural-list {
-  margin: 0;
+.surface-solution-details p {
+  margin: 0 0 1.35rem;
+}
+
+
+.surface-solution-details p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   Strong Text
+   ===================================================== */
+
+.surface-solution-details strong {
+  color: #0b1120;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   Lists
+   ===================================================== */
+
+.surface-solution-details ul {
+  margin: 0.7rem 0 1.4rem;
 
   padding: 0;
 
@@ -305,21 +372,24 @@
 
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 1rem 2.5rem;
+  gap: 0.9rem 2.2rem;
 }
 
-.structural-list li {
+
+.surface-solution-details li {
   position: relative;
 
-  padding-left: 1.4rem;
+  padding-left: 1.5rem;
 
   color: #1f2937;
 
-  font-size: 1rem;
+  font-size: 1.05rem;
 
-  font-weight: 700;
+  line-height: 1.7;
+
+  font-weight: 600;
 }
 
 
@@ -327,18 +397,16 @@
    Blue Bullet
    ===================================================== */
 
-.structural-list li::before {
+.surface-solution-details li::before {
   content: "";
 
   position: absolute;
 
   left: 0;
+  top: 0.65rem;
 
-  top: 0.55rem;
-
-  width: 8px;
-
-  height: 8px;
+  width: 9px;
+  height: 9px;
 
   border-radius: 50%;
 
@@ -347,13 +415,32 @@
 
 
 /* =====================================================
-   Responsive
+   Detail Subheadings
    ===================================================== */
 
-@media (max-width: 1500px) {
-  .structural-card {
-    grid-template-columns: 280px 280px 1fr;
-  }
+.surface-solution-details h3 {
+  margin: 1.5rem 0 0.65rem;
+
+  color: #0b1120;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   First Subheading
+   ===================================================== */
+
+.surface-solution-details h3:first-child {
+  margin-top: 0;
 }
 
 
@@ -361,14 +448,69 @@
    Medium Desktop
    ===================================================== */
 
-@media (max-width: 1200px) {
-  .structural-card {
-    grid-template-columns: 240px 240px 1fr;
+@media (max-width: 1400px) {
+
+  .surface-solution-card {
+    grid-template-columns: 430px 1fr;
+
+    gap: 2.5rem;
+
+    padding: 2.5rem;
   }
 
-  .structural-images img {
-    height: 250px;
+  .surface-solution-image {
+    min-height: 410px;
   }
+
+  .surface-solution-image img {
+    min-height: 410px;
+  }
+
+  .surface-solution-title h2 {
+    font-size: 1.7rem;
+  }
+
+}
+
+
+/* =====================================================
+   Smaller Desktop
+   ===================================================== */
+
+@media (max-width: 1200px) {
+
+  .surface-solutions-content {
+    padding: 2rem;
+  }
+
+  .surface-solution-card {
+    grid-template-columns: 360px 1fr;
+
+    gap: 2rem;
+
+    padding: 2.2rem;
+  }
+
+  .surface-solution-image {
+    min-height: 370px;
+  }
+
+  .surface-solution-image img {
+    min-height: 370px;
+  }
+
+  .surface-solution-title h2 {
+    font-size: 1.55rem;
+  }
+
+  .surface-solution-description {
+    font-size: 1.08rem;
+  }
+
+  .surface-solution-details {
+    font-size: 1.02rem;
+  }
+
 }
 
 
@@ -377,29 +519,39 @@
    ===================================================== */
 
 @media (max-width: 992px) {
-  .structural-work-hero {
+
+  .surface-hero {
     padding: 3rem 2rem 1.5rem;
   }
 
-  .structural-work-content {
+  .surface-solutions-content {
     padding: 2rem;
   }
 
-  .structural-card {
+  .surface-solution-card {
     grid-template-columns: 1fr;
+
+    gap: 2.2rem;
   }
 
-  .structural-images {
-    display: grid;
+  .surface-solution-image {
+    min-height: 360px;
 
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 1.5rem;
+    height: 360px;
   }
 
-  .structural-images img {
-    height: 260px;
+  .surface-solution-image img {
+    min-height: 360px;
   }
+
+  .surface-solution-info {
+    padding: 0;
+  }
+
+  .surface-solution-details {
+    font-size: 1.05rem;
+  }
+
 }
 
 
@@ -408,25 +560,67 @@
    ===================================================== */
 
 @media (max-width: 768px) {
-  .structural-work-hero {
+
+  .surface-hero {
     padding: 2.5rem 1.5rem;
   }
 
-  .structural-work-hero-copy h1 {
+  .surface-hero-copy h1 {
     font-size: clamp(
-      2.5rem,
+      2.6rem,
       8vw,
-      3.5rem
+      3.7rem
     );
   }
 
-  .structural-work-content {
+  .surface-hero-copy p {
+    font-size: 1.05rem;
+  }
+
+  .surface-solutions-content {
     padding: 1.5rem;
   }
 
-  .structural-list {
+  .surface-solution-card {
+    padding: 1.7rem;
+
+    border-radius: 26px;
+
+    gap: 1.7rem;
+  }
+
+  .surface-solution-image {
+    height: 280px;
+
+    min-height: 280px;
+
+    border-radius: 20px;
+  }
+
+  .surface-solution-image img {
+    min-height: 280px;
+  }
+
+  .surface-solution-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .surface-solution-description {
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+  }
+
+  .surface-solution-details {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .surface-solution-details ul {
     grid-template-columns: 1fr;
   }
+
 }
 
 
@@ -435,33 +629,84 @@
    ===================================================== */
 
 @media (max-width: 576px) {
-  .structural-work-hero {
+
+  .surface-hero {
     padding: 2rem 1rem;
   }
 
-  .structural-work-hero-copy h1 {
+  .surface-hero-copy h1 {
     flex-wrap: wrap;
 
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 
-  .structural-images {
-    grid-template-columns: 1fr;
+  .surface-hero-copy p {
+    font-size: 1rem;
+
+    line-height: 1.75;
   }
 
-  .structural-images img {
+  .surface-solutions-content {
+    padding: 1rem;
+  }
+
+  .surface-solution-card {
+    padding: 1.35rem;
+
+    border-radius: 22px;
+  }
+
+  .surface-solution-image {
     height: 220px;
+
+    min-height: 220px;
+
+    border-radius: 18px;
   }
 
-  .structural-icon {
-    width: 60px;
-
-    height: 60px;
-
-    font-size: 1.4rem;
+  .surface-solution-image img {
+    min-height: 220px;
   }
 
-  .structural-title h2 {
-    font-size: 1.3rem;
+  .surface-solution-title {
+    align-items: flex-start;
+
+    gap: 0.9rem;
   }
+
+  .surface-solution-icon {
+    width: 62px;
+    height: 62px;
+
+    border-radius: 18px;
+
+    font-size: 1.45rem;
+  }
+
+  .surface-solution-title h2 {
+    font-size: 1.2rem;
+
+    line-height: 1.35;
+  }
+
+  .surface-solution-description {
+    font-size: 1rem;
+
+    line-height: 1.75;
+  }
+
+  .surface-solution-details {
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+  }
+
+  .surface-solution-details li {
+    font-size: 0.98rem;
+  }
+
+  .surface-solution-details h3 {
+    font-size: 0.9rem;
+  }
+
 }

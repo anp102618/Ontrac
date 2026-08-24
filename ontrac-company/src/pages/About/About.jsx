@@ -41,7 +41,7 @@ export default function About() {
 
             <p>
               Ontrac Company is an experienced construction materials supplier
-              based in Casablanca-Settat, Morocco, dedicated to providing
+              based in Casablanca-Mediouna, Morocco, dedicated to providing
               reliable, high-quality, and efficient solutions for the
               construction industry.
             </p>

@@ -1,7 +1,6 @@
 import "./Products.css";
 
-import productsBg from "../../assets/OurProducts/ourproducts_bg.png";
-import productsImg from "../../assets/OurProducts/products.jpg";
+import productsBg from "../../assets/OurProducts/product2_bg.jpg";
 
 import Header from "../../components/Header/Header";
 
@@ -29,34 +28,17 @@ export default function Products() {
 
         <Header activePage="products" />
 
-
         {/* =====================================================
             PRODUCTS CONTENT
         ===================================================== */}
 
         <section className="products-layout">
 
-
           {/* =================================================
-              LEFT IMAGE
-          ================================================= */}
-
-          <div className="products-left">
-
-            <img
-              src={productsImg}
-              alt="Our products"
-            />
-
-          </div>
-
-
-          {/* =================================================
-              RIGHT CONTENT
+              RIGHT / MAIN CONTENT
           ================================================= */}
 
           <div className="products-right">
-
 
             {/* =================================================
                 HERO
@@ -78,25 +60,22 @@ export default function Products() {
 
             </div>
 
-
             {/* =================================================
                 PRODUCT CATEGORIES
             ================================================= */}
 
             <div className="products-grid">
 
-
               {/* =================================================
-                  STRUCTURE
+                  STRUCTURAL WORK
               ================================================= */}
 
-              <Link
-                to="/structural-work"
-                className="product-card"
-              >
+              <div className="product-card">
 
-                <div className="product-card-header">
-
+                <Link
+                  to="/structural-work"
+                  className="product-card-header product-category-link"
+                >
                   <div className="product-icon">
                     <FaCubes />
                   </div>
@@ -104,51 +83,61 @@ export default function Products() {
                   <h3>
                     STRUCTURAL WORK
                   </h3>
-
-                </div>
+                </Link>
 
                 <ul className="product-features">
 
                   <li>
-                    Ready-Mix Concrete
+                    <Link to="/structural-work#ready-mix-concrete">
+                      Ready-Mix Concrete
+                    </Link>
                   </li>
 
                   <li>
-                    Reinforcing Bars
+                    <Link to="/structural-work#reinforcing-bars">
+                      Reinforcing Bars
+                    </Link>
                   </li>
 
                   <li>
-                    Cement
+                    <Link to="/structural-work#cement">
+                      Cement
+                    </Link>
                   </li>
 
                   <li>
-                    Concrete Blocks & Structural Hollow Core Slabs
+                    <Link to="/structural-work#concrete-blocks">
+                      Concrete Blocks & Structural Hollow Core Slabs
+                    </Link>
                   </li>
 
                   <li>
-                    Aggregates
+                    <Link to="/structural-work#aggregates">
+                      Aggregates
+                    </Link>
                   </li>
 
                   <li>
-                    Concrete Admixtures & Chemicals
+                    <Link to="/structural-work#concrete-admixtures">
+                      Concrete Admixtures & Chemicals
+                    </Link>
                   </li>
 
                 </ul>
 
-              </Link>
+              </div>
 
 
               {/* =================================================
                   PROTECTION & INSULATION
               ================================================= */}
 
-              <Link
-                to="/protection-insulation"
-                className="product-card"
-              >
+              <div className="product-card">
 
-                <div className="product-card-header">
-
+                <Link
+                  to="/protection-insulation"
+                  className="product-card-header product-category-link"
+                >
                   <div className="product-icon">
                     <FaShieldAlt />
                   </div>
@@ -156,39 +145,87 @@ export default function Products() {
                   <h3>
                     PROTECTION & INSULATION
                   </h3>
+                </Link>
 
-                </div>
+                <ul className="product-features protection-features">
 
-                <ul className="product-features">
+                  {/* THERMAL AND ACOUSTIC INSULATION */}
 
-                  <li>
-                    Thermal insulation
+                  <li className="protection-subcategory">
+                    THERMAL AND ACOUSTIC INSULATION:
                   </li>
 
                   <li>
-                    Waterproofing
+                    <Link to="/protection-insulation#glass-wool">
+                      Glass Wool
+                    </Link>
                   </li>
 
                   <li>
-                    Building protection
+                    <Link to="/protection-insulation#rock-wool">
+                      Rock Wool
+                    </Link>
+                  </li>
+
+
+                  {/* WATERPROOFING SOLUTIONS */}
+
+                  <li className="protection-subcategory">
+                    WATERPROOFING SOLUTIONS:
+                  </li>
+
+                  <li>
+                    <Link to="/protection-insulation#waterproofing-membranes">
+                      Waterproofing Membranes
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/protection-insulation#waterproofing-coatings">
+                      Waterproofing Coatings
+                    </Link>
+                  </li>
+
+
+                  {/* BUILDING PROTECTION */}
+
+                  <li className="protection-subcategory">
+                    BUILDING PROTECTION:
+                  </li>
+
+                  <li>
+                    <Link to="/protection-insulation#anti-corrosion-coating">
+                      Anti-Corrosion Coating
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/protection-insulation#surface-sealing-product">
+                      Surface Sealing Product
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/protection-insulation#protective-chemicals">
+                      Protective Chemicals
+                    </Link>
                   </li>
 
                 </ul>
 
-              </Link>
+              </div>
 
 
               {/* =================================================
                   WALLS & SURFACES
               ================================================= */}
 
-              <Link
-                to="/walls-surfaces"
-                className="product-card"
-              >
+              <div className="product-card">
 
-                <div className="product-card-header">
-
+                <Link
+                  to="/walls-surfaces"
+                  className="product-card-header product-category-link"
+                >
                   <div className="product-icon">
                     <FaLayerGroup />
                   </div>
@@ -196,39 +233,61 @@ export default function Products() {
                   <h3>
                     WALLS & SURFACES
                   </h3>
-
-                </div>
+                </Link>
 
                 <ul className="product-features">
 
                   <li>
-                    Mortars
+                    <Link to="/walls-surfaces#adhesive-mortars">
+                      Adhesive Mortars
+                    </Link>
                   </li>
 
                   <li>
-                    Plasters
+                    <Link to="/walls-surfaces#decorative-plasters">
+                      Decorative Plasters
+                    </Link>
                   </li>
 
                   <li>
-                    Surface preparation
+                    <Link to="/walls-surfaces#adhesion-primers">
+                      Adhesion Primers
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/walls-surfaces#decorative-polished-concrete">
+                      Decorative Polished Concrete
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/walls-surfaces#plaster-coatings">
+                      Plaster Coatings
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/walls-surfaces#surface-preparation">
+                      Surface Preparation
+                    </Link>
                   </li>
 
                 </ul>
 
-              </Link>
+              </div>
 
 
               {/* =================================================
                   TILES & FLOORING
               ================================================= */}
 
-              <Link
-                to="/tiles-flooring"
-                className="product-card"
-              >
+              <div className="product-card">
 
-                <div className="product-card-header">
-
+                <Link
+                  to="/tiles-flooring"
+                  className="product-card-header product-category-link"
+                >
                   <div className="product-icon">
                     <FaThLarge />
                   </div>
@@ -236,43 +295,43 @@ export default function Products() {
                   <h3>
                     TILES & FLOORING
                   </h3>
-
-                </div>
+                </Link>
 
                 <ul className="product-features">
 
                   <li>
-                    Tile adhesives
+                    <Link to="/tiles-flooring#leveling-system-accessories">
+                      Leveling System Accessories
+                    </Link>
                   </li>
 
                   <li>
-                    Grouts
+                    <Link to="/tiles-flooring#colored-grout">
+                      Colored Grout
+                    </Link>
                   </li>
 
                   <li>
-                    Flooring solutions
-                  </li>
-
-                  <li>
-                    Ceramic products
+                    <Link to="/tiles-flooring#tiling-solutions">
+                      Tiling Solutions for All Your Projects
+                    </Link>
                   </li>
 
                 </ul>
 
-              </Link>
+              </div>
 
 
               {/* =================================================
                   FINISHING DETAILS
               ================================================= */}
 
-              <Link
-                to="/final-details"
-                className="product-card"
-              >
+              <div className="product-card">
 
-                <div className="product-card-header">
-
+                <Link
+                  to="/final-details"
+                  className="product-card-header product-category-link"
+                >
                   <div className="product-icon">
                     <FaPaintRoller />
                   </div>
@@ -280,26 +339,56 @@ export default function Products() {
                   <h3>
                     FINISHING DETAILS
                   </h3>
+                </Link>
 
-                </div>
+                <ul className="product-features protection-features">
 
-                <ul className="product-features">
+                  {/* COATINGS */}
 
-                  <li>
-                    Coatings
+                  <li className="protection-subcategory">
+                    COATINGS:
                   </li>
 
                   <li>
-                    Decorative finishes
+                    <Link to="/final-details#paintings">
+                      Paintings
+                    </Link>
                   </li>
 
                   <li>
-                    Final details
+                    <Link to="/final-details#protective-coatings">
+                      Protective Coatings
+                    </Link>
+                  </li>
+
+
+                  {/* FINAL DETAILS */}
+
+                  <li className="protection-subcategory">
+                    FINAL DETAILS:
+                  </li>
+
+                  <li>
+                    <Link to="/final-details#custom-doors-furniture">
+                      Custom Doors &amp; Furniture
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/final-details#modular-kitchens">
+                      Modular Kitchens
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/final-details#cupboards-storage">
+                      Cupboards &amp; Storage
+                    </Link>
                   </li>
 
                 </ul>
 
-              </Link>
+              </div>
 
             </div>
 
@@ -308,7 +397,6 @@ export default function Products() {
         </section>
 
       </div>
-
     </main>
   );
 }

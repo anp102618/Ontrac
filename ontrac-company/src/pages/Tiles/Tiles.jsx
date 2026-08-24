@@ -1,125 +1,214 @@
 import "../Home/Home.css";
 import "./Tiles.css";
 
-import Header from "../../components/Header/Header";
-
 import solutionsBg from "../../assets/logo/ourproducts_bg.png";
 
-import adhesive1 from "../../assets/Tiles/adhesive1.jpg";
-import adhesive2 from "../../assets/Tiles/adhesive2.jpg";
+import Header from "../../components/Header/Header";
 
-import grout1 from "../../assets/Tiles/grout1.jpg";
-import grout2 from "../../assets/Tiles/grout2.jpg";
+import levelingSystemAccessories from "../../assets/Tiles/levelling_system.jpg";
+import coloredGrout from "../../assets/Tiles/colored_grout.jpg";
+import tilingSolutions from "../../assets/Tiles/tiling_solutions.png";
 
-import flooring1 from "../../assets/Tiles/flooring1.jpg";
-import flooring2 from "../../assets/Tiles/flooring2.jpg";
-
-import ceramic1 from "../../assets/Tiles/ceramic1.jpg";
-import ceramic2 from "../../assets/Tiles/ceramic2.jpg";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import {
   FaThLarge,
-  FaGripHorizontal,
+  FaFillDrip,
   FaLayerGroup,
-  FaBorderAll,
 } from "react-icons/fa";
 
 
 /* =====================================================
-   TILES & FLOORING DATA
+   TILES SOLUTIONS DATA
 ===================================================== */
 
-const tileSections = [
+const tilesSolutions = [
   {
-    title: "Tile Adhesives",
+    id: "leveling-system-accessories",
 
-    icon: <FaGripHorizontal />,
-
-    description:
-      "Advanced bonding solutions designed for secure tile installation, excellent grip, and long-lasting performance across various surfaces.",
-
-    types: [
-      "Cement-Based Tile Adhesives",
-      "Ready-Mix Tile Adhesives",
-      "Wall & Floor Tile Adhesives",
-      "Large Format Tile Adhesives",
-      "Stone & Marble Adhesives",
-      "Flexible Tile Adhesives",
-    ],
-
-    images: [adhesive1, adhesive2],
-  },
-
-  {
-    title: "Grouts",
-
-    icon: <FaLayerGroup />,
-
-    description:
-      "High-quality grouting solutions that provide strong joint filling, moisture resistance, and a clean, finished appearance.",
-
-    types: [
-      "Cement Grouts",
-      "Epoxy Grouts",
-      "Waterproof Grouts",
-      "Colored Grouts",
-      "Tile Joint Fillers",
-      "High-Performance Grouts",
-    ],
-
-    images: [grout1, grout2],
-  },
-
-  {
-    title: "Flooring Solutions",
+    title: "Leveling System Accessories",
 
     icon: <FaThLarge />,
 
-    description:
-      "Durable flooring systems designed to meet functional, aesthetic, and performance requirements for different environments.",
+    image: levelingSystemAccessories,
 
-    types: [
-      "Concrete Flooring",
-      "Epoxy Flooring",
-      "Industrial Flooring",
-      "Decorative Flooring",
-      "Self-Leveling Flooring",
-      "Commercial Flooring Systems",
-    ],
+    shortDescription:
+      "Professional leveling accessories designed to ensure a flat and even installation of tiles and slabs.",
 
-    images: [flooring1, flooring2],
+    content: (
+      <>
+        <p>
+          Our leveling system accessories help ensure a flat and even
+          installation of tiles and slabs, providing a consistent and
+          professional finish.
+        </p>
+
+        <p>
+          The system helps prevent imperfections and height differences
+          between tiles while the adhesive dries.
+        </p>
+
+        <h3>Key Benefits</h3>
+
+        <ul>
+          <li>
+            Ensures a flat and even installation of tiles and slabs.
+          </li>
+
+          <li>
+            Prevents imperfections between the tiles while the adhesive dries.
+          </li>
+        </ul>
+      </>
+    ),
   },
 
+
   {
-    title: "Ceramic Products",
+    id: "colored-grout",
 
-    icon: <FaBorderAll />,
+    title: "Colored Grout",
 
-    description:
-      "Quality ceramic materials offering strength, easy maintenance, and attractive finishes for interior and exterior applications.",
+    icon: <FaFillDrip />,
 
-    types: [
-      "Ceramic Tiles",
-      "Porcelain Tiles",
-      "Wall Tiles",
-      "Floor Tiles",
-      "Decorative Tiles",
-      "Outdoor Tiles",
-    ],
+    image: coloredGrout,
 
-    images: [ceramic1, ceramic2],
+    shortDescription:
+      "Extra-fine colored mortar for joints up to 3 mm, offering a smooth, waterproof, and easy-to-clean finish.",
+
+    content: (
+      <>
+        <p>
+          Our colored grout is an extra-fine colored mortar designed for
+          joints up to 3 mm. It provides an attractive and durable finish
+          while making application and cleaning easy.
+        </p>
+
+        <h3>Key Benefits</h3>
+
+        <ul>
+          <li>
+            Ultra-smooth finish.
+          </li>
+
+          <li>
+            Very easy application and cleaning.
+          </li>
+
+          <li>
+            Waterproof.
+          </li>
+
+          <li>
+            Application in the form of a paste or slurry.
+          </li>
+        </ul>
+      </>
+    ),
+  },
+
+
+  {
+    id: "tiling-solutions",
+
+    title: "Tiling Solutions for All Your Projects",
+
+    icon: <FaLayerGroup />,
+
+    image: tilingSolutions,
+
+    shortDescription:
+      "Complete tiling solutions for indoor and outdoor applications, combining aesthetics, strength, and durability.",
+
+    content: (
+      <>
+        <p>
+          Our tiling solutions are designed for a wide variety of projects,
+          providing reliable performance for both indoor and outdoor
+          applications.
+        </p>
+
+        <p>
+          Whether for living spaces, terraces, or areas in contact with
+          water, our tiles combine aesthetics, strength, and durability
+          to meet your project requirements.
+        </p>
+
+        <h3>Applications</h3>
+
+        <ul>
+          <li>
+            Indoor living spaces.
+          </li>
+
+          <li>
+            Outdoor areas.
+          </li>
+
+          <li>
+            Terraces.
+          </li>
+
+          <li>
+            Areas in contact with water.
+          </li>
+        </ul>
+
+        <p>
+          These solutions are designed to provide a durable and attractive
+          finish across a wide range of tiling projects.
+        </p>
+      </>
+    ),
   },
 ];
 
 
 /* =====================================================
-   TILES & FLOORING PAGE
+   TILES PAGE
 ===================================================== */
 
-export default function TilesFlooring() {
+export default function Tiles() {
+
+  const location = useLocation();
+
+
+  /* =====================================================
+     HANDLE HASH NAVIGATION
+  ===================================================== */
+
+  useEffect(() => {
+
+    if (!location.hash) {
+      return;
+    }
+
+    const elementId = location.hash.substring(1);
+
+    const timer = setTimeout(() => {
+
+      const element = document.getElementById(elementId);
+
+      if (element) {
+
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+      }
+
+    }, 100);
+
+    return () => clearTimeout(timer);
+
+  }, [location.hash]);
+
+
   return (
     <main
-      className="structural-work-page"
+      className="concrete-solutions-page"
       style={{
         backgroundImage: `url(${solutionsBg})`,
       }}
@@ -133,7 +222,7 @@ export default function TilesFlooring() {
 
 
       {/* =================================================
-          HERO
+          TILES HERO
       ================================================= */}
 
       <section className="structural-work-hero">
@@ -167,32 +256,28 @@ export default function TilesFlooring() {
 
 
       {/* =================================================
-          TILES & FLOORING CONTENT
+          TILES SOLUTIONS CONTENT
       ================================================= */}
 
-      <section className="structural-work-content">
+      <section className="concrete-solutions-content">
 
-        {tileSections.map((section) => (
+        {tilesSolutions.map((solution) => (
 
           <article
-            className="structural-card"
-            key={section.title}
+            key={solution.id}
+            id={solution.id}
+            className="concrete-solution-card"
           >
 
             {/* =========================================
-                IMAGES
+                IMAGE
             ========================================= */}
 
-            <div className="structural-images">
+            <div className="concrete-solution-image">
 
               <img
-                src={section.images[0]}
-                alt={section.title}
-              />
-
-              <img
-                src={section.images[1]}
-                alt={`${section.title} 2`}
+                src={solution.image}
+                alt={solution.title}
               />
 
             </div>
@@ -202,49 +287,47 @@ export default function TilesFlooring() {
                 INFORMATION
             ========================================= */}
 
-            <div className="structural-info">
+            <div className="concrete-solution-info">
 
-              {/* TITLE */}
+              {/* =====================================
+                  TITLE
+              ===================================== */}
 
-              <div className="structural-title">
+              <div className="concrete-solution-title">
 
-                <div className="structural-icon">
-                  {section.icon}
+                <div className="concrete-solution-icon">
+                  {solution.icon}
                 </div>
 
                 <div>
 
                   <h2>
-                    {section.title}
+                    {solution.title}
                   </h2>
 
-                  <div className="title-line"></div>
+                  <div className="concrete-title-line"></div>
 
                 </div>
 
               </div>
 
 
-              {/* DESCRIPTION */}
+              {/* =====================================
+                  SHORT DESCRIPTION
+              ===================================== */}
 
-              <p className="structural-description">
-                {section.description}
+              <p className="concrete-solution-description">
+                {solution.shortDescription}
               </p>
 
 
-              {/* PRODUCT TYPES */}
+              {/* =====================================
+                  DETAILED CONTENT
+              ===================================== */}
 
-              <ul className="structural-list">
-
-                {section.types.map((item) => (
-
-                  <li key={item}>
-                    {item}
-                  </li>
-
-                ))}
-
-              </ul>
+              <div className="concrete-solution-details">
+                {solution.content}
+              </div>
 
             </div>
 
